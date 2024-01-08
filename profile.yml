@@ -8,43 +8,43 @@ features:
 build:
     plugins:
         - war
-        - org.grails.grails-web
+        - org.graceframework.grace-web
     excludes:
-        - org.grails.grails-core
+        - org.graceframework.grace-core
 dependencies:
     - scope: compile
       coords: "org.springframework.boot:spring-boot-starter-actuator"
     - scope: compile
       coords: "org.springframework.boot:spring-boot-starter-tomcat"
     - scope: compile
-      coords: "org.grails:grails-plugin-url-mappings"
+      coords: "org.graceframework:grace-plugin-url-mappings"
     - scope: compile
-      coords: "org.grails:grails-plugin-rest"
+      coords: "org.graceframework:grace-plugin-codecs"
     - scope: compile
-      coords: "org.grails:grails-plugin-codecs"
+      coords: "org.graceframework:grace-plugin-controllers"
     - scope: compile
-      coords: "org.grails:grails-plugin-interceptors"
+      coords: "org.graceframework:grace-plugin-i18n"
     - scope: compile
-      coords: "org.grails:grails-plugin-services"
+      coords: "org.graceframework:grace-plugin-interceptors"
     - scope: compile
-      coords: "org.grails:grails-plugin-datasource"
+      coords: "org.graceframework:grace-plugin-datasource"
     - scope: compile
-      coords: "org.grails:grails-plugin-databinding"
+      coords: "org.graceframework:grace-plugin-databinding"
     - scope: compile
-      coords: "org.grails:grails-web-boot"
+      coords: "org.graceframework:grace-plugin-domain-class"
     - scope: compile
-      coords: "org.grails:grails-logging"
+      coords: "org.graceframework:grace-plugin-rest"
     - scope: compile
-      coords: "org.grails.plugins:cache"
+      coords: "org.graceframework:grace-plugin-services"
     - scope: compile
-      coords: "org.grails.plugins:async"
+      coords: "org.graceframework:grace-boot"
+    - scope: compile
+      coords: "org.graceframework:grace-logging"
+    - scope: compile
+      coords: "org.graceframework.plugins:cache"
+    - scope: compile
+      coords: "org.graceframework.plugins:async"
     - scope: testCompile
-      coords: "io.micronaut:micronaut-http-client"
+      coords: "org.graceframework:grace-test-support"
     - scope: testCompile
-      coords: "org.grails:grails-web-testing-support"
-    - scope: testCompile
-      coords: "org.grails:grails-gorm-testing-support"
-    - scope: testCompile
-      coords: "org.grails:views-json-testing-support"
-    - scope: testCompile
-      coords: "org.hibernate.validator:hibernate-validator:6.1.7.Final"
+      coords: "org.graceframework:views-json-testing-support"
