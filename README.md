@@ -1,5 +1,5 @@
-# Grails REST-API Profile
+# Grace REST-API Profile
 
-[![Build Status](https://travis-ci.org/grails-profiles/rest-api.svg?branch=master)](https://travis-ci.org/grails-profiles/rest-api)
+[![Build Status](https://github.com/grace-profiles/rest-api/workflows/Grace%20CI/badge.svg)](https://github.com/grace-profiles/rest-api/actions)
 
-A profile for creating REST endpoints with Grails
+A profile for creating REST endpoints with Grace
