@@ -9,7 +9,7 @@ description:
 steps:
  - command: render
    template: templates/artifacts/Service.groovy
-   destination: grails-app/services/@artifact.package.path@/@artifact.name@Service.groovy
+   destination: app/services/@artifact.package.path@/@artifact.name@Service.groovy
    convention: Service
  - command: render
    template: templates/testing/Service.groovy

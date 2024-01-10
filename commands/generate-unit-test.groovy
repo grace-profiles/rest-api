@@ -1,7 +1,7 @@
 import org.grails.cli.interactive.completers.DomainClassCompleter
 
 description( "Generates a unit test for a controller that performs REST operations" ) {
-  usage "grails generate-unit-test [DOMAIN CLASS]"
+  usage "grace generate-unit-test [DOMAIN CLASS]"
   argument name:'Domain Class', description:"The name of the domain class", required:true
   completer DomainClassCompleter
   flag name:'force', description:"Whether to overwrite existing files"
@@ -10,7 +10,7 @@ description( "Generates a unit test for a controller that performs REST operatio
 if(args) {
   def classNames = args
   if(args[0] == '*') {
-    classNames = resources("file:grails-app/domain/**/*.groovy").collect { className(it) }
+    classNames = resources("file:app/domain/**/*.groovy").collect { className(it) }
   }
   for(arg in classNames) {
     def sourceClass = source(arg)

@@ -11,7 +11,7 @@ steps:
  - command: render
    template: templates/artifacts/Interceptor.groovy
    convention: Interceptor
-   destination: grails-app/controllers/@artifact.package.path@/@artifact.name@Interceptor.groovy
+   destination: app/controllers/@artifact.package.path@/@artifact.name@Interceptor.groovy
  - command: render
    template: templates/testing/Interceptor.groovy
    convention: Interceptor

@@ -10,10 +10,10 @@ steps:
  - command: render
    template: templates/artifacts/Controller.groovy
    convention: Controller
-   destination: grails-app/controllers/@artifact.package.path@/@artifact.name@Controller.groovy
+   destination: app/controllers/@artifact.package.path@/@artifact.name@Controller.groovy
  - command: render
    template: templates/testing/Controller.groovy
    convention: Controller
    destination: src/test/groovy/@artifact.package.path@/@artifact.name@ControllerSpec.groovy
  - command: mkdir
-   location: grails-app/views/@artifact.propertyName@
+   location: app/views/@artifact.propertyName@

@@ -1,7 +1,7 @@
 import org.grails.cli.interactive.completers.DomainClassCompleter
 
 description( "Generates a controller that performs REST operations" ) {
-  usage "grails generate-controller [DOMAIN CLASS]"
+  usage "grace generate-controller [DOMAIN CLASS]"
   argument name:'Domain Class', description:"The name of the domain class", required:true
   completer DomainClassCompleter
   synonyms 'generate-resource-controller'
@@ -11,7 +11,7 @@ description( "Generates a controller that performs REST operations" ) {
 if(args) {
   def classNames = args
   if(args[0] == '*') {
-    classNames = resources("file:grails-app/domain/**/*.groovy").collect { className(it) }
+    classNames = resources("file:app/domain/**/*.groovy").collect { className(it) }
   }
   for(arg in classNames) {
     def sourceClass = source(arg)
@@ -19,12 +19,12 @@ if(args) {
     if(sourceClass) {
       def model = model(sourceClass)
       render template: template('artifacts/scaffolding/Controller.groovy'),
-             destination: file("grails-app/controllers/${model.packagePath}/${model.convention('Controller')}.groovy"),
+             destination: file("app/controllers/${model.packagePath}/${model.convention('Controller')}.groovy"),
              model: model,
              overwrite: overwrite
 
       render template: template('artifacts/scaffolding/Service.groovy'),
-              destination: file("grails-app/services/${model.packagePath}/${model.convention('Service')}.groovy"),
+              destination: file("app/services/${model.packagePath}/${model.convention('Service')}.groovy"),
               model: model,
               overwrite: overwrite
 
