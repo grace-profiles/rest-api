@@ -99,7 +99,7 @@ publishing {
                 scm {
                     connection = 'scm:git:git://github.com/grace-profiles/rest-api.git'
                     developerConnection = 'scm:git:ssh://github.com:grace-profiles/rest-api.git'
-                    url = 'https://github.com/grace-profiles/rest-api/tree/2022.2.x'
+                    url = 'https://github.com/grace-profiles/rest-api'
                 }
             }
         }
