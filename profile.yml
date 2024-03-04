@@ -17,15 +17,9 @@ dependencies:
     - scope: compile
       coords: "org.springframework.boot:spring-boot-starter-tomcat"
     - scope: compile
-      coords: "org.graceframework:grace-plugin-url-mappings"
-    - scope: compile
       coords: "org.graceframework:grace-plugin-codecs"
     - scope: compile
       coords: "org.graceframework:grace-plugin-controllers"
-    - scope: compile
-      coords: "org.graceframework:grace-plugin-i18n"
-    - scope: compile
-      coords: "org.graceframework:grace-plugin-interceptors"
     - scope: compile
       coords: "org.graceframework:grace-plugin-datasource"
     - scope: compile
@@ -33,9 +27,17 @@ dependencies:
     - scope: compile
       coords: "org.graceframework:grace-plugin-domain-class"
     - scope: compile
+      coords: "org.graceframework:grace-plugin-i18n"
+    - scope: compile
+      coords: "org.graceframework:grace-plugin-interceptors"
+    - scope: compile
+      coords: "org.graceframework:grace-plugin-management"
+    - scope: compile
       coords: "org.graceframework:grace-plugin-rest"
     - scope: compile
       coords: "org.graceframework:grace-plugin-services"
+    - scope: compile
+      coords: "org.graceframework:grace-plugin-url-mappings"
     - scope: compile
       coords: "org.graceframework:grace-boot"
     - scope: compile
