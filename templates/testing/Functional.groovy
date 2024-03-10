@@ -32,6 +32,6 @@ class @artifact.name@Spec extends Specification {
         then:"The response is correct"
         response.status == HttpStatus.OK
         response.header(HttpHeaders.CONTENT_TYPE) == 'application/json;charset=UTF-8'
-        response.body().message == 'Welcome to Grails!'
+        response.body().message == 'Welcome to Grace!'
     }
 }
