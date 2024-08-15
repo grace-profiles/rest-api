@@ -1,4 +1,5 @@
 @artifact.package@
+
 import grails.gorm.transactions.Transactional
 
 @Transactional
