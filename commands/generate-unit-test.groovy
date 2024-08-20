@@ -1,8 +1,8 @@
 import org.grails.cli.interactive.completers.DomainClassCompleter
 
-description( "Generates a unit test for a controller that performs REST operations" ) {
+description( "Generates a Unit Test for a controller that performs REST operations" ) {
   usage "grace generate-unit-test [DOMAIN CLASS]"
-  argument name:'Domain Class', description:"The name of the domain class", required:true
+  argument name:'Domain Class', description:"The name of the Domain Class", required:true
   completer DomainClassCompleter
   flag name:'force', description:"Whether to overwrite existing files"
 }

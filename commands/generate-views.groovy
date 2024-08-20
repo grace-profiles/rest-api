@@ -1,8 +1,8 @@
 import org.grails.cli.interactive.completers.DomainClassCompleter
 
-description( "Generates a controller that performs REST operations" ) {
+description( "Generates the Gson Views" ) {
   usage "grace generate-views [DOMAIN CLASS]"
-  argument name:'Domain Class', description:"The name of the domain class", required:true
+  argument name:'Domain Class', description:"The name of the Domain Class", required:true
   completer DomainClassCompleter
   
   flag name:'force', description:"Whether to overwrite existing files"

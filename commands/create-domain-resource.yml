@@ -1,8 +1,8 @@
 description:
-    - Creates a domain class that represents a resource
+    - Creates a Domain Class that represents a resource
     - usage: 'create-domain-resource [resource name]'
     - argument: Resource Name
-      description: The name of the resource
+      description: The name of the Resource
     - flag: force
       description: Whether to override existing files
 steps:

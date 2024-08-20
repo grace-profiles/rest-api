@@ -1,9 +1,9 @@
 description:
-    - Creates an interceptor
+    - Creates an Interceptor
     - usage: 'create-interceptor [interceptor name]'
     - completer: org.grails.cli.interactive.completers.DomainClassCompleter
     - argument: "Interceptor name"
-      description: "The name of the interceptor"
+      description: "The name of the Interceptor"
     - flag: force
       description: Whether to override existing files
 
