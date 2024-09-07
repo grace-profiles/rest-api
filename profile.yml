@@ -25,9 +25,9 @@ dependencies:
     - scope: compile
       coords: "org.graceframework:grace-plugin-controllers"
     - scope: compile
-      coords: "org.graceframework:grace-plugin-datasource"
-    - scope: compile
       coords: "org.graceframework:grace-plugin-databinding"
+    - scope: compile
+      coords: "org.graceframework:grace-plugin-datasource"
     - scope: compile
       coords: "org.graceframework:grace-plugin-domain-class"
     - scope: compile
