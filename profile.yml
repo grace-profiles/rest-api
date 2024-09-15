@@ -15,9 +15,15 @@ dependencies:
     - scope: compile
       coords: "org.springframework.boot:spring-boot-starter-actuator"
     - scope: compile
+      coords: "org.springframework.boot:spring-boot-starter-logging"
+    - scope: compile
       coords: "org.springframework.boot:spring-boot-starter-tomcat"
     - scope: compile
+      coords: "org.springframework.boot:spring-boot-starter-validation"
+    - scope: compile
       coords: "org.graceframework:grace-boot"
+    - scope: compile
+      coords: "org.graceframework:grace-core"
     - scope: compile
       coords: "org.graceframework:grace-logging"
     - scope: compile
