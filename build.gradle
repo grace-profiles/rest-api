@@ -2,8 +2,7 @@ buildscript {
     repositories {
         // mavenLocal()
         mavenCentral()
-        maven { url "https://plugins.gradle.org/m2/" }
-        maven { url 'https://repo.gradle.org/gradle/libs-releases' }
+        gradlePluginPortal()
         if (projectVersion.endsWith("SNAPSHOT")) {
             maven { url "https://s01.oss.sonatype.org/content/repositories/snapshots/" }
         }
