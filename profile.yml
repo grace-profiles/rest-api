@@ -1,9 +1,10 @@
 description: Profile for REST API applications
 features:
     defaults: 
-        - hibernate
+        - async
+        - cache
         - events
-    required:
+        - hibernate
         - json-views
 build:
     plugins:
@@ -50,10 +51,6 @@ dependencies:
       coords: "org.graceframework:grace-plugin-services"
     - scope: compile
       coords: "org.graceframework:grace-plugin-url-mappings"
-    - scope: compile
-      coords: "org.graceframework.plugins:async"
-    - scope: compile
-      coords: "org.graceframework.plugins:cache"
     - scope: testCompile
       coords: "org.graceframework:grace-test-support"
     - scope: testCompile
