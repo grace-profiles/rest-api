@@ -13,6 +13,8 @@ build:
     excludes:
         - org.graceframework.grace-core
 dependencies:
+    - scope: console
+      coords: "org.graceframework:grace-console"
     - scope: compile
       coords: "org.springframework.boot:spring-boot-starter-actuator"
     - scope: compile
