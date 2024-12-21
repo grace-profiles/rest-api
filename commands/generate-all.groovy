@@ -1,6 +1,6 @@
 import org.grails.cli.interactive.completers.DomainClassCompleter
 
-description( "Generates a controller that performs REST operations" ) {
+description("Generates a Controller that performs CRUD operations and the associated views") {
   usage "grace generate-all [DOMAIN CLASS]"
   argument name:'Domain Class', description:"The name of the Domain Class", required:true
   completer DomainClassCompleter
