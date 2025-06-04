@@ -1,7 +1,7 @@
 import org.grails.cli.interactive.completers.DomainClassCompleter
 
 description( "Generates a Functional Test for a controller that performs REST operations" ) {
-  usage "grace generate-functional-test [DOMAIN CLASS]"
+  usage "grace generate-functional-test [Domain Class]"
   argument name:'Domain Class', description:"The name of the Domain Class", required:true
   completer DomainClassCompleter
   flag name:'force', description:"Whether to overwrite existing files"

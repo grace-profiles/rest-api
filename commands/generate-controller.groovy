@@ -1,7 +1,7 @@
 import org.grails.cli.interactive.completers.DomainClassCompleter
 
 description( "Generates a Controller that performs REST operations" ) {
-  usage "grace generate-controller [DOMAIN CLASS]"
+  usage "grace generate-controller [Domain Class]"
   argument name:'Domain Class', description:"The name of the Domain Class", required:true
   completer DomainClassCompleter
   synonyms 'generate-resource-controller'

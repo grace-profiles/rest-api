@@ -1,6 +1,6 @@
 description:
     - Creates a Functional Test
-    - usage: 'create-functional-test [test name]'
+    - usage: 'grace create-functional-test [Test Name]'
     - completer: org.grails.cli.interactive.completers.AllClassCompleter
     - argument: "Functional Test Name"
       description: "The name of the Functional Test"

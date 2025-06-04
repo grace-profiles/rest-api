@@ -1,6 +1,6 @@
 description:
     - Creates a Controller
-    - usage: 'create-controller [controller name]'
+    - usage: 'grace create-controller [Controller Name]'
     - completer: org.grails.cli.interactive.completers.DomainClassCompleter
     - argument: Controller Name
       description: The name of the Controller

@@ -1,6 +1,6 @@
 description:
     - Creates an Integration Test
-    - usage: 'create-integration-test [test name]'
+    - usage: 'grace create-integration-test [Test Name]'
     - completer: org.grails.cli.interactive.completers.AllClassCompleter
     - argument: "Integration Test Name"
       description: "The name of the Integration Test"

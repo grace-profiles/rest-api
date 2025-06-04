@@ -1,6 +1,6 @@
 description:
     - Creates a Domain Class that represents a resource
-    - usage: 'create-domain-resource [resource name]'
+    - usage: 'grace create-domain-resource [Resource Name]'
     - argument: Resource Name
       description: The name of the Resource
     - flag: force

@@ -1,6 +1,6 @@
 description:
     - Creates an Interceptor
-    - usage: 'create-interceptor [interceptor name]'
+    - usage: 'grace create-interceptor [Interceptor Name]'
     - completer: org.grails.cli.interactive.completers.DomainClassCompleter
     - argument: "Interceptor name"
       description: "The name of the Interceptor"
