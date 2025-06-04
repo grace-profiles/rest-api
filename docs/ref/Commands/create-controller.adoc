@@ -1,0 +1,38 @@
+== create-controller
+
+=== Description
+
+Creates a Controller.
+
+=== Arguments
+
+[cols="1,2,1"]
+|===
+|**Name**
+|**Description**
+|**Required**
+
+|Controller Name
+|The name of the command to be created
+|true
+|===
+
+=== Flags
+
+[cols="1,2,1"]
+|===
+|**Name**
+|**Description**
+|**Type**
+
+|force
+|Whether to overwrite existing files
+|boolean, default: false
+|===
+
+=== Usage
+
+[source,bash]
+----
+$ grace create-controller [Controller Name]
+----

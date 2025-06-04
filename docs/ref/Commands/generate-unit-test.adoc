@@ -1,0 +1,38 @@
+== generate-unit-test
+
+=== Description
+
+Generates a Unit Test for a controller that performs REST operations.
+
+=== Arguments
+
+[cols="1,2,1"]
+|===
+|**Name**
+|**Description**
+|**Required**
+
+|Domain Class
+|The name of the command to be created
+|true
+|===
+
+=== Flags
+
+[cols="1,2,1"]
+|===
+|**Name**
+|**Description**
+|**Type**
+
+|force
+|Whether to overwrite existing files
+|boolean, default: false
+|===
+
+=== Usage
+
+[source,bash]
+----
+$ grace generate-unit-test [Domain Class]
+----

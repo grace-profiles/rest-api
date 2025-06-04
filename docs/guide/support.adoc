@@ -1,0 +1,2 @@
+For support, please use the https://github.com/orgs/graceframework/discussions[Grace Discussions] or open an issue on
+https://github.com/grace-profiles/plugin/issues[Github]

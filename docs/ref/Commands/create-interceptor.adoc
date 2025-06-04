@@ -1,0 +1,38 @@
+== create-interceptor
+
+=== Description
+
+Creates an Interceptor.
+
+=== Arguments
+
+[cols="1,2,1"]
+|===
+|**Name**
+|**Description**
+|**Required**
+
+|Interceptor Name
+|The name of the Interceptor
+|true
+|===
+
+=== Flags
+
+[cols="1,2,1"]
+|===
+|**Name**
+|**Description**
+|**Type**
+
+|force
+|Whether to overwrite existing files
+|boolean, default: false
+|===
+
+=== Usage
+
+[source,bash]
+----
+$ grace create-interceptor [Interceptor Name]
+----

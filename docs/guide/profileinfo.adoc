@@ -1,0 +1,30 @@
+You can always get information about the provided command and available features executing
+`grace profile-info rest-api`
+
+You will see an output similar to:
+
+[source, bash]
+----
+Profile: rest-api
+Version: 2023.3.0
+--------------------------------------------------------------------------------
+Profile for REST API applications
+
+Provided Commands:
+--------------------------------------------------------------------------------
+* create-controller              Creates a Controller
+* create-domain-resource         Creates a Domain Class that represents a resource
+* create-functional-test         Creates a Functional Test
+* create-integration-test        Creates an Integration Test
+* create-interceptor             Creates an Interceptor
+* create-restful-controller      Creates a REST Controller
+* create-service                 Creates a Service
+* generate-all                   Generates a Controller that performs CRUD operations and the associated views
+* generate-controller            Generates a Controller that performs REST operations
+* generate-functional-test       Generates a Functional Test for a controller that performs REST operations
+* generate-unit-test             Generates a Unit Test for a controller that performs REST operations
+* generate-views                 Generates the Gson Views
+
+Provided Features:
+--------------------------------------------------------------------------------
+----
