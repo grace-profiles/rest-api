@@ -13,7 +13,7 @@ Creates a Controller.
 |**Required**
 
 |Controller Name
-|The name of the command to be created
+|The name of the Controller
 |true
 |===
 
@@ -35,4 +35,13 @@ Creates a Controller.
 [source,bash]
 ----
 $ grace create-controller [Controller Name]
+----
+
+=== Examples
+
+[source,bash]
+----
+$ grace create-controller Post
+| Created app/controllers/com/example/PostController.groovy
+| Created src/test/groovy/com/example/PostControllerSpec.groovy
 ----

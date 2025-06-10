@@ -36,3 +36,11 @@ Creates a REST Controller.
 ----
 $ grace create-restful-controller [Domain Class]
 ----
+
+=== Examples
+
+[source,bash]
+----
+$ grace create-restful-controller Post
+| Created app/controllers/com/example/PostController.groovy
+----

@@ -13,7 +13,7 @@ Generates a Unit Test for a controller that performs REST operations.
 |**Required**
 
 |Domain Class
-|The name of the command to be created
+|The name of the Domain Class
 |true
 |===
 
@@ -35,4 +35,13 @@ Generates a Unit Test for a controller that performs REST operations.
 [source,bash]
 ----
 $ grace generate-unit-test [Domain Class]
+----
+
+=== Examples
+
+[source,bash]
+----
+$ grace generate-unit-test Post
+| Rendered template Spec.groovy to destination src/test/groovy/com/example/PostControllerSpec.groovy
+| Scaffolding completed for app/domain/com/example/Post.groovy
 ----

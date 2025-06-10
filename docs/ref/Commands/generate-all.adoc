@@ -34,5 +34,23 @@ Generates a Controller that performs CRUD operations and the associated views.
 
 [source,bash]
 ----
-$ grace generate-all [Command Name]
+$ grace generate-all [Domain Class]
+----
+
+=== Examples
+
+[source,bash]
+----
+$ grace generate-all Post
+| Rendered template Controller.groovy to destination app/controllers/com/example/PostController.groovy
+| Rendered template Service.groovy to destination app/services/com/example/PostService.groovy
+| Rendered template Spec.groovy to destination src/test/groovy/com/example/PostControllerSpec.groovy
+| Rendered template ServiceSpec.groovy to destination src/integration-test/groovy/com/example/PostServiceSpec.groovy
+| Scaffolding completed for app/domain/com/example/Post.groovy
+| Rendered template index.gson to destination app/views/post/index.gson
+| Rendered template show.gson to destination app/views/post/show.gson
+| Rendered template _domain.gson to destination app/views/post/_post.gson
+| Scaffolding completed for app/domain/com/example/Post.groovy
+| Rendered template FunctionalSpec.groovy to destination src/integration-test/groovy/com/example/PostFunctionalSpec.groovy
+| Scaffolding completed for app/domain/com/example/Post.groovy
 ----

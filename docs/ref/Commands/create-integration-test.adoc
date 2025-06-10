@@ -36,3 +36,11 @@ Creates an Integration Test.
 ----
 $ grace create-integration-test [Test Name]
 ----
+
+=== Examples
+
+[source,bash]
+----
+$ grace create-integration-test Post
+| Created src/integration-test/groovy/com/example/PostSpec.groovy
+----

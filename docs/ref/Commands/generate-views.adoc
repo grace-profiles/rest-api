@@ -13,7 +13,7 @@ Generates the Gson Views.
 |**Required**
 
 |Domain Class
-|The name of the command to be created
+|The name of the Domain Class
 |true
 |===
 
@@ -35,4 +35,15 @@ Generates the Gson Views.
 [source,bash]
 ----
 $ grace generate-views [Domain Class]
+----
+
+=== Examples
+
+[source,bash]
+----
+$ grace generate-views Post
+| Rendered template index.gson to destination app/views/post/index.gson
+| Rendered template show.gson to destination app/views/post/show.gson
+| Rendered template _domain.gson to destination app/views/post/_post.gson
+| Scaffolding completed for app/domain/com/example/Post.groovy
 ----

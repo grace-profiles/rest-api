@@ -13,7 +13,7 @@ Creates a Service.
 |**Required**
 
 |Service Name
-|The name of the command to be created
+|The name of the Service
 |true
 |===
 
@@ -35,4 +35,13 @@ Creates a Service.
 [source,bash]
 ----
 $ grace create-service [Service Name]
+----
+
+=== Examples
+
+[source,bash]
+----
+$ grace create-service Post
+| Created app/services/com/example/PostService.groovy
+| Created src/test/groovy/com/example/PostServiceSpec.groovy
 ----

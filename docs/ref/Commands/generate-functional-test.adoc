@@ -13,7 +13,7 @@ Generates a Functional Test for a controller that performs REST operations.
 |**Required**
 
 |Domain Class
-|The name of the command to be created
+|The name of the Domain Class
 |true
 |===
 
@@ -35,4 +35,13 @@ Generates a Functional Test for a controller that performs REST operations.
 [source,bash]
 ----
 $ grace generate-functional-test [Domain Class]
+----
+
+=== Examples
+
+[source,bash]
+----
+$ grace generate-functional-test Post
+| Rendered template FunctionalSpec.groovy to destination src/integration-test/groovy/com/example/PostFunctionalSpec.groovy
+| Scaffolding completed for app/domain/com/example/Post.groovy
 ----

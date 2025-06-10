@@ -40,3 +40,15 @@ Generates a Controller that performs REST operations.
 ----
 $ grace generate-controller [Domain Class]
 ----
+
+=== Examples
+
+[source,bash]
+----
+$ grace generate-controller Post
+| Rendered template Controller.groovy to destination app/controllers/com/example/PostController.groovy
+| Rendered template Service.groovy to destination app/services/com/example/PostService.groovy
+| Rendered template Spec.groovy to destination src/test/groovy/com/example/PostControllerSpec.groovy
+| Rendered template ServiceSpec.groovy to destination src/integration-test/groovy/com/example/PostServiceSpec.groovy
+| Scaffolding completed for app/domain/com/example/Post.groovy
+----

@@ -36,3 +36,11 @@ Creates a Functional Test.
 ----
 $ grace create-functional-test [Test Name]
 ----
+
+=== Examples
+
+[source,bash]
+----
+$ grace create-functional-test Post
+| Created src/integration-test/groovy/com/example/PostSpec.groovy
+----

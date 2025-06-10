@@ -36,3 +36,12 @@ Creates an Interceptor.
 ----
 $ grace create-interceptor [Interceptor Name]
 ----
+
+=== Examples
+
+[source,bash]
+----
+$ grace create-interceptor Example
+| Created app/controllers/com/example/ExampleInterceptor.groovy
+| Created src/test/groovy/com/example/ExampleInterceptorSpec.groovy
+----

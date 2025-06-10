@@ -36,3 +36,12 @@ Creates a Domain Class that represents a resource.
 ----
 $ grace create-domain-resource [Resource Name]
 ----
+
+=== Examples
+
+[source,bash]
+----
+$ grace create-domain-resource Post
+| Created app/domain/com/example/Post.groovy
+| Created src/test/groovy/com/example/PostSpec.groovy
+----
