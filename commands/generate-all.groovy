@@ -11,7 +11,6 @@ description("Generates a Controller that performs CRUD operations and the associ
 if(args) {
     generateController(*args)
     generateViews(*args)
-    generateUnitTest(*args)
     generateFunctionalTest(*args)    
 }
 else {
