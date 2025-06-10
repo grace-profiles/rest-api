@@ -1,5 +1,4 @@
 @artifact.package@
-
 import grails.rest.*
 import grails.converters.*
 
