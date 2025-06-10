@@ -108,26 +108,98 @@ function addJsClass() {
 <div class="content">
 <pre class="CodeRay highlight"><code data-lang="bash">Profile: rest-api
 Version: 2023.3.0
---------------------------------------------------------------------------------
-Profile for REST API applications
+Extends: base
+Description: Profile for REST API applications
 
 Provided Commands:
---------------------------------------------------------------------------------
-* create-controller              Creates a Controller
-* create-domain-resource         Creates a Domain Class that represents a resource
-* create-functional-test         Creates a Functional Test
-* create-integration-test        Creates an Integration Test
-* create-interceptor             Creates an Interceptor
-* create-restful-controller      Creates a REST Controller
-* create-service                 Creates a Service
-* generate-all                   Generates a Controller that performs CRUD operations and the associated views
-* generate-controller            Generates a Controller that performs REST operations
-* generate-functional-test       Generates a Functional Test for a controller that performs REST operations
-* generate-unit-test             Generates a Unit Test for a controller that performs REST operations
-* generate-views                 Generates the Gson Views
+----------------------------------------------------------------------------------------------------
+Name                           Description
+----------------------------------------------------------------------------------------------------
+about                          About your application's environment
+assemble                       Creates a JAR or WAR archive for production deployment
+bug-report                     Creates a zip file that can be attached to issue reports for the current project [deprecated]
+clean                          Cleans a Grace application's compiled sources
+compile                        Compiles a Grace application
+console                        Runs the Grace interactive console
+create-command                 Creates an Application Command
+create-controller              Creates a Controller
+create-domain-class            Creates a Domain Class
+create-domain-resource         Creates a Domain Class that represents a resource
+create-functional-test         Creates a Functional Test
+create-integration-test        Creates an Integration Test
+create-interceptor             Creates an Interceptor
+create-plugin                  Creates a Dynamic Plugin
+create-restful-controller      Creates a REST Controller
+create-script                  Creates a Groovy Script
+create-service                 Creates a Service
+create-unit-test               Creates a Unit Test
+dependency-report              Prints out the Grace application's dependencies [deprecated]
+generate-all                   Generates a Controller that performs CRUD operations and the associated views
+generate-controller            Generates a Controller that performs REST operations
+generate-functional-test       Generates a Functional Test for a controller that performs REST operations
+generate-unit-test             Generates a Unit Test for a controller that performs REST operations
+generate-views                 Generates the Gson Views
+package                        Packages a Grace application
+run-app                        Runs a Grace application
+run-command                    Executes Grace commands
+run-script                     Executes Groovy scripts in a Grace context
+shell                          Runs the Grace interactive shell
+stats                          Prints statistics about the project
+stop-app                       Stops the running Grace application
+test-app                       Runs the applications tests
 
 Provided Features:
---------------------------------------------------------------------------------</code></pre>
+----------------------------------------------------------------------------------------------------
+Name                           Required  Defaults  Description
+----------------------------------------------------------------------------------------------------
+asset-pipeline                                     Adds Asset Pipeline to a Grace project
+async                                      +       Adds support for the Grace Async
+cache                                      +       Adds support for the Grace Cache abstraction
+database-migration                                 Grace Database Migration Plugin
+events                                     +       Adds support for the Grace EventBus abstraction
+geb                                                Adds Geb 7, WebDriver 4.x and Webdriver binaries Gradle Plugin dependencies to run functional tests.
+gsp                                                Adds support for GSP to the project
+hibernate                                  +       Adds GORM for Hibernate to the project
+json-views                                 +       Adds support for JSON Views to the project
+markup-views                                       Adds support for Markup Views to the project
+mongodb                                            Adds GORM for MonogoDB to the project</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>The above list includes all the commands and features from it&#8217;s parent profile.</p>
+</div>
+<div class="paragraph">
+<p>But if you want only show it&#8217;s own commands and features, you can execute <code>grace profile-info rest-api --only</code>.
+You will see thant <code>rest-api</code> profile provides some more commands and features below:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="CodeRay highlight"><code data-lang="bash">Profile: rest-api
+Version: 2023.3.0
+Extends: base
+Description: Profile for REST API applications
+
+Provided Commands:
+----------------------------------------------------------------------------------------------------
+Name                           Description
+----------------------------------------------------------------------------------------------------
+create-controller              Creates a Controller
+create-domain-resource         Creates a Domain Class that represents a resource
+create-functional-test         Creates a Functional Test
+create-integration-test        Creates an Integration Test
+create-interceptor             Creates an Interceptor
+create-restful-controller      Creates a REST Controller
+create-service                 Creates a Service
+generate-all                   Generates a Controller that performs CRUD operations and the associated views
+generate-controller            Generates a Controller that performs REST operations
+generate-functional-test       Generates a Functional Test for a controller that performs REST operations
+generate-unit-test             Generates a Unit Test for a controller that performs REST operations
+generate-views                 Generates the Gson Views
+
+Provided Features:
+----------------------------------------------------------------------------------------------------
+Name                           Required  Defaults  Description
+----------------------------------------------------------------------------------------------------</code></pre>
 </div>
 </div>
 

@@ -107,7 +107,7 @@ function addJsClass(el) {
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Domain Class</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">The name of the command to be created</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The name of the Domain Class</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">true</p></td>
 </tr>
 </tbody>
@@ -140,6 +140,16 @@ function addJsClass(el) {
 <div class="listingblock">
 <div class="content">
 <pre class="CodeRay highlight"><code data-lang="bash">$ grace generate-functional-test [Domain Class]</code></pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_examples">Examples</h3>
+<div class="listingblock">
+<div class="content">
+<pre class="CodeRay highlight"><code data-lang="bash">$ grace generate-functional-test Post
+| Rendered template FunctionalSpec.groovy to destination src/integration-test/groovy/com/example/PostFunctionalSpec.groovy
+| Scaffolding completed for app/domain/com/example/Post.groovy</code></pre>
 </div>
 </div>
 </div>

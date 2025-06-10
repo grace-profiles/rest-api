@@ -139,7 +139,26 @@ function addJsClass(el) {
 <h3 id="_usage">Usage</h3>
 <div class="listingblock">
 <div class="content">
-<pre class="CodeRay highlight"><code data-lang="bash">$ grace generate-all [Command Name]</code></pre>
+<pre class="CodeRay highlight"><code data-lang="bash">$ grace generate-all [Domain Class]</code></pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_examples">Examples</h3>
+<div class="listingblock">
+<div class="content">
+<pre class="CodeRay highlight"><code data-lang="bash">$ grace generate-all Post
+| Rendered template Controller.groovy to destination app/controllers/com/example/PostController.groovy
+| Rendered template Service.groovy to destination app/services/com/example/PostService.groovy
+| Rendered template Spec.groovy to destination src/test/groovy/com/example/PostControllerSpec.groovy
+| Rendered template ServiceSpec.groovy to destination src/integration-test/groovy/com/example/PostServiceSpec.groovy
+| Scaffolding completed for app/domain/com/example/Post.groovy
+| Rendered template index.gson to destination app/views/post/index.gson
+| Rendered template show.gson to destination app/views/post/show.gson
+| Rendered template _domain.gson to destination app/views/post/_post.gson
+| Scaffolding completed for app/domain/com/example/Post.groovy
+| Rendered template FunctionalSpec.groovy to destination src/integration-test/groovy/com/example/PostFunctionalSpec.groovy
+| Scaffolding completed for app/domain/com/example/Post.groovy</code></pre>
 </div>
 </div>
 </div>
