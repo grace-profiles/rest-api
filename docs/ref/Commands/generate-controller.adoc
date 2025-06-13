@@ -36,14 +36,14 @@ Generates a Controller that performs REST operations.
 
 === Usage
 
-[source,bash]
+[source,console]
 ----
 $ grace generate-controller [Domain Class]
 ----
 
 === Examples
 
-[source,bash]
+[source,console]
 ----
 $ grace generate-controller Post
 | Rendered template Controller.groovy to destination app/controllers/com/example/PostController.groovy

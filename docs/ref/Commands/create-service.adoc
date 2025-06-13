@@ -32,14 +32,14 @@ Creates a Service.
 
 === Usage
 
-[source,bash]
+[source,console]
 ----
 $ grace create-service [Service Name]
 ----
 
 === Examples
 
-[source,bash]
+[source,console]
 ----
 $ grace create-service Post
 | Created app/services/com/example/PostService.groovy

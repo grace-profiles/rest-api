@@ -32,14 +32,14 @@ Creates a Functional Test.
 
 === Usage
 
-[source,bash]
+[source,console]
 ----
 $ grace create-functional-test [Test Name]
 ----
 
 === Examples
 
-[source,bash]
+[source,console]
 ----
 $ grace create-functional-test Post
 | Created src/integration-test/groovy/com/example/PostSpec.groovy

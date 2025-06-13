@@ -32,14 +32,14 @@ Generates a Controller that performs CRUD operations and the associated views.
 
 === Usage
 
-[source,bash]
+[source,console]
 ----
 $ grace generate-all [Domain Class]
 ----
 
 === Examples
 
-[source,bash]
+[source,console]
 ----
 $ grace generate-all Post
 | Rendered template Controller.groovy to destination app/controllers/com/example/PostController.groovy

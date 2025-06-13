@@ -32,14 +32,14 @@ Generates a Functional Test for a controller that performs REST operations.
 
 === Usage
 
-[source,bash]
+[source,console]
 ----
 $ grace generate-functional-test [Domain Class]
 ----
 
 === Examples
 
-[source,bash]
+[source,console]
 ----
 $ grace generate-functional-test Post
 | Rendered template FunctionalSpec.groovy to destination src/integration-test/groovy/com/example/PostFunctionalSpec.groovy

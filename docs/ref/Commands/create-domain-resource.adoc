@@ -32,14 +32,14 @@ Creates a Domain Class that represents a resource.
 
 === Usage
 
-[source,bash]
+[source,console]
 ----
 $ grace create-domain-resource [Resource Name]
 ----
 
 === Examples
 
-[source,bash]
+[source,console]
 ----
 $ grace create-domain-resource Post
 | Created app/domain/com/example/Post.groovy

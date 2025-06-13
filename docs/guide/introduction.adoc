@@ -2,7 +2,7 @@ Grace Profiles encapsulate project commands, templates, and plugins.
 
 To create an application using the `rest-api` profile you can use the next command:
 
-[source, bash]
+[source,console]
 ----
-grace create-app com.example.myapp --profile=rest-api
+$ grace create-app com.example.myapp --profile=rest-api
 ----

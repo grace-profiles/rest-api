@@ -32,14 +32,14 @@ Generates a Unit Test for a controller that performs REST operations.
 
 === Usage
 
-[source,bash]
+[source,console]
 ----
 $ grace generate-unit-test [Domain Class]
 ----
 
 === Examples
 
-[source,bash]
+[source,console]
 ----
 $ grace generate-unit-test Post
 | Rendered template Spec.groovy to destination src/test/groovy/com/example/PostControllerSpec.groovy

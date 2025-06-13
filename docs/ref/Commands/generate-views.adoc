@@ -32,14 +32,14 @@ Generates the Gson Views.
 
 === Usage
 
-[source,bash]
+[source,console]
 ----
 $ grace generate-views [Domain Class]
 ----
 
 === Examples
 
-[source,bash]
+[source,console]
 ----
 $ grace generate-views Post
 | Rendered template index.gson to destination app/views/post/index.gson

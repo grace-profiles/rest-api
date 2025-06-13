@@ -3,7 +3,7 @@ You can always get information about the provided command and available features
 
 You will see an output similar to:
 
-[source, bash]
+[source,console]
 ----
 Profile: rest-api
 Version: 2023.3.0
@@ -69,7 +69,7 @@ The above list includes all the commands and features from it's parent profile.
 But if you want only show it's own commands and features, you can execute `grace profile-info rest-api --only`. 
 You will see thant `rest-api` profile provides some more commands and features below:
 
-[source, bash]
+[source,console]
 ----
 Profile: rest-api
 Version: 2023.3.0

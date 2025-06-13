@@ -32,14 +32,14 @@ Creates an Integration Test.
 
 === Usage
 
-[source,bash]
+[source,console]
 ----
 $ grace create-integration-test [Test Name]
 ----
 
 === Examples
 
-[source,bash]
+[source,console]
 ----
 $ grace create-integration-test Post
 | Created src/integration-test/groovy/com/example/PostSpec.groovy

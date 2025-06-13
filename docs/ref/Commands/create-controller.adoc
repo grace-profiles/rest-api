@@ -32,14 +32,14 @@ Creates a Controller.
 
 === Usage
 
-[source,bash]
+[source,console]
 ----
 $ grace create-controller [Controller Name]
 ----
 
 === Examples
 
-[source,bash]
+[source,console]
 ----
 $ grace create-controller Post
 | Created app/controllers/com/example/PostController.groovy
