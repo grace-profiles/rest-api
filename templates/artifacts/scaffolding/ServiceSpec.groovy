@@ -1,17 +1,18 @@
 <%=packageName ? "package ${packageName}" : ''%>
 
-import grails.testing.mixin.integration.Integration
-import grails.gorm.transactions.Rollback
-import org.grails.datastore.mapping.core.Datastore
-import org.springframework.beans.factory.annotation.Autowired
 import spock.lang.Specification
+import org.springframework.beans.factory.annotation.Autowired
+
+import grails.gorm.transactions.Rollback
+import grails.testing.mixin.integration.Integration
+import org.grails.datastore.mapping.core.Datastore
 
 @Integration
 @Rollback
 class ${className}ServiceSpec extends Specification {
 
-    ${className}Service ${propertyName}Service
     @Autowired Datastore datastore
+    ${className}Service ${propertyName}Service
 
     private Long setupData() {
         // TODO: Populate valid domain instances and return a valid ID

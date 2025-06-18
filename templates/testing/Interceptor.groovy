@@ -1,6 +1,7 @@
 @artifact.package@
-import grails.testing.web.interceptor.InterceptorUnitTest
 import spock.lang.Specification
+
+import grails.testing.web.interceptor.InterceptorUnitTest
 
 class @artifact.name@InterceptorSpec extends Specification implements InterceptorUnitTest<@artifact.name@Interceptor> {
 

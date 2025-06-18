@@ -1,37 +1,25 @@
 @artifact.package@
+import spock.lang.Specification
+import org.springframework.beans.factory.annotation.Autowired
+import org.springframework.boot.test.web.client.TestRestTemplate
+import org.springframework.boot.test.web.server.LocalServerPort
 
 import grails.testing.mixin.integration.Integration
-import grails.testing.spock.OnceBefore
-import io.micronaut.http.HttpRequest
-import io.micronaut.http.HttpHeaders
-import io.micronaut.http.HttpResponse
-import io.micronaut.http.HttpStatus
-import io.micronaut.http.client.HttpClient
-import spock.lang.AutoCleanup
-import spock.lang.Shared
-import spock.lang.Specification
-
 
 @Integration
 class @artifact.name@Spec extends Specification {
 
-    @Shared
-    @AutoCleanup
-    HttpClient client
+    @LocalServerPort
+    private int port
 
-    @OnceBefore
-    void init() {
-        String baseUrl = "http://localhost:$serverPort"
-        this.client  = HttpClient.create(new URL(baseUrl))
-    }
+    @Autowired
+    private TestRestTemplate restTemplate
 
     void "Test the homepage"() {
-        when:"The home page is requested"
-        HttpResponse<Map> response = client.toBlocking().exchange(HttpRequest.GET("/"), Map)
+        when: "The home page is requested"
+        String message = this.restTemplate.getForObject("http://localhost:" + port + "/", String.class))
 
-        then:"The response is correct"
-        response.status == HttpStatus.OK
-        response.header(HttpHeaders.CONTENT_TYPE) == 'application/json;charset=UTF-8'
-        response.body().message == 'Welcome to Grace!'
+        then: "The response is correct"
+        message.contains('Welcome to Grace')
     }
 }

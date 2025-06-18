@@ -1,6 +1,7 @@
 @artifact.package@
-import grails.testing.web.controllers.ControllerUnitTest
 import spock.lang.Specification
+
+import grails.testing.web.controllers.ControllerUnitTest
 
 class @artifact.name@ControllerSpec extends Specification implements ControllerUnitTest<@artifact.name@Controller> {
 
