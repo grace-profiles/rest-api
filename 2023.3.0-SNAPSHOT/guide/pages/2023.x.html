@@ -1,176 +1,95 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
                       "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
-    <head>
-        <title>Grace Profile : REST API 2023.3.0-SNAPSHOT</title>
-        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-        <link rel="stylesheet" href="../css/main.css" type="text/css" media="screen, print" title="Style" charset="utf-8" />
-        <link rel="stylesheet" href="../css/pdf.css" type="text/css" media="print" title="PDF" charset="utf-8" />
+<head>
+    <title>2.1 What's new in 2023.x 2023.3.0-SNAPSHOT</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <link rel="stylesheet" href="../css/main.css" type="text/css" media="screen, print" title="Style" charset="utf-8"/>
+    <link rel="stylesheet" href="../css/pdf.css" type="text/css" media="print" title="PDF" charset="utf-8"/>
     <script type="text/javascript">
-function addJsClass(el) {
+function addJsClass() {
     var classes = document.body.className.split(" ");
     classes.push("js");
     document.body.className = classes.join(" ");
 }
     </script>
+</head>
 
-    
-    </head>
-
-    <body class="body" onload="addJsClass();">
-        <div id="navigation">
-            <div class="navHeader">
-                
-                <span id="logo">
-                    <a href="https://graceframework.org" title="Go to Grace Framework Website">
-                        <img src="../img/grace.svg" alt="Grace Framework" />
-                    </a>
-                </span>
-                
-                <div class="docHeader">
-                    <h1 class="docTitle">Grace Profile : REST API</h1>
-                    <h3 class="docSubTitle">A profile for REST API applications</h3>
-                    <span class="docVersion">2023.3.0-SNAPSHOT</span>
-                </div>
-            </div>
-            <div class="navLinks">
-                <ul>
-                    <li>
-                        <div id="nav-summary" onmouseover="toggleNavSummary(false)" onmouseout="toggleNavSummary(true)">
-                            <a href="../guide/index.html" class="button">Table of contents</a>
-                            <div id="nav-summary-childs" style="display:none;">
-                                
-                                <div class="toc-item" style="margin-left:0"><a href="#introduction"><strong>1</strong><span>Introduction</span></a></div>
-                                
-                                <div class="toc-item" style="margin-left:0"><a href="#releases"><strong>2</strong><span>Release History</span></a></div>
-                                
-                                <div class="toc-item" style="margin-left:0"><a href="#upgrade"><strong>3</strong><span>Upgrade</span></a></div>
-                                
-                                <div class="toc-item" style="margin-left:0"><a href="#profileinfo"><strong>4</strong><span>Profile Info</span></a></div>
-                                
-                                <div class="toc-item" style="margin-left:0"><a href="#support"><strong>5</strong><span>Support</span></a></div>
-                                
-                            </div>
-                        </div>
-                    </li>
-                    <li class="separator selected">
-                        <a id="ref-button" onclick="localToggle(); return false;" href="#">Quick Reference</a>
-                    </li>
-                </ul>
-
-            </div>
+<body class="body" onload="addJsClass();">
+<div id="navigation">
+    <div class="navHeader">
+        
+        <span id="logo">
+            <a href="https://graceframework.org" title="Grace Framework Website">
+                <img src="../img/grace.svg" alt="Grace Framework" />
+            </a>
+        </span>
+        
+        <div class="docHeader">
+            <h1 class="docTitle">Grace Profile : REST API</h1>
+            <h3 class="docSubTitle">A profile for REST API applications</h3>
         </div>
+    </div>
+    <div class="navLinks">
+        <ul>
+            <li>
+                <div id="nav-summary" onmouseover="toggleNavSummary(false)" onmouseout="toggleNavSummary(true)">
+                    <a href="../../guide/index.html" class="button">Table of contents</a>
 
-        <table id="colset" cellpadding="0" cellspacing="0">
-            <tr>
-                <td id="col1">
-                    <div id="main" class="corner-all">
-
-                        <span id='toggle-col1' class="toggle">(<a href="#" onclick="localToggle(); return false;">Quick Reference</a>)</span>
-
-                        <div class="project">
-                            <h1>Grace Profile : REST API</h1>
-                            <p><strong>Authors:</strong> Michael Yan</p>
-                            <p><strong>Version:</strong> 2023.3.0-SNAPSHOT</p>
-                            
-                        </div>
-
+                    <div id="nav-summary-childs" style="display:none;">
                         
-                        <div id="table-of-content">
-                            <h2>Table of Contents</h2>
-                            
-                            <div class="toc-item" style="margin-left:0px"><a href="#introduction"><strong>1</strong><span>Introduction</span></a></div>
-                            
-                            <div class="toc-item" style="margin-left:0px"><a href="#releases"><strong>2</strong><span>Release History</span></a></div>
-                            
-                            <div class="toc-item" style="margin-left:10px"><a href="#2023.x"><strong>2.1</strong><span>What's new in 2023.x</span></a></div>
-                            
-                            <div class="toc-item" style="margin-left:0px"><a href="#upgrade"><strong>3</strong><span>Upgrade</span></a></div>
-                            
-                            <div class="toc-item" style="margin-left:0px"><a href="#profileinfo"><strong>4</strong><span>Profile Info</span></a></div>
-                            
-                            <div class="toc-item" style="margin-left:0px"><a href="#support"><strong>5</strong><span>Support</span></a></div>
-                            
-                            <div style="clear:both" ></div>
+                        <div class="toc-item" style="margin-left:0"><a href="../../guide/introduction.html"><strong>1</strong><span>Introduction</span></a>
                         </div>
                         
+                        <div class="toc-item" style="margin-left:0"><a href="../../guide/releases.html"><strong>2</strong><span>Release History</span></a>
+                        </div>
                         
+                        <div class="toc-item" style="margin-left:0"><a href="../../guide/upgrade.html"><strong>3</strong><span>Upgrade</span></a>
+                        </div>
+                        
+                        <div class="toc-item" style="margin-left:0"><a href="../../guide/profileinfo.html"><strong>4</strong><span>Profile Info</span></a>
+                        </div>
+                        
+                        <div class="toc-item" style="margin-left:0"><a href="../../guide/support.html"><strong>5</strong><span>Support</span></a>
+                        </div>
+                        
+                    </div>
+                </div>
+            </li>
+            <li class="separator selected">
+                <a id="ref-button" onclick="localToggle(); return false;" href="#">Quick Reference</a>
+            </li>
+        </ul>
+    </div>
 
-<h1 id="introduction"><a class="anchor" href="#introduction"></a>1 Introduction</h1>
 
-<div class='contribute-btn'>
-    <button type='button' class='btn btn-default' onclick='window.location.href="https://github.com/grace-profiles/rest-api/edit/2023.3.x/docs/guide/introduction.adoc"'>
-        <i class='fa fa-pencil-square-o'></i> Improve this doc
-    </button>
 </div>
 
+<table id="colset" border="0" cellpadding="0" cellspacing="0">
+    <tr>
+        <td id="col1">
+            <div id="main" class="corner-all">
 
-<div class="paragraph">
-<p>Grace Profiles encapsulate project commands, templates, and plugins.</p>
-</div>
-<div class="paragraph">
-<p>To create an application using the <code>rest-api</code> profile you can use the next command:</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="CodeRay highlight"><code data-lang="console">$ grace create-app com.example.myapp --profile=rest-api</code></pre>
-</div>
-</div>
+                
+                    <div class="toc-item prev-left"><a href="../../guide/introduction.html">&lt;&lt; <strong>1</strong><span>Introduction</span></a></div>
+                
 
+                <span id='toggle-col1' class="toggle">(<a href="#" onclick="localToggle(); return false;">Quick Reference</a>)</span>
 
-<h1 id="releases"><a class="anchor" href="#releases"></a>2 Release History</h1>
-
-<div class='contribute-btn'>
-    <button type='button' class='btn btn-default' onclick='window.location.href="https://github.com/grace-profiles/rest-api/edit/2023.3.x/docs/guide/releases.adoc"'>
-        <i class='fa fa-pencil-square-o'></i> Improve this doc
-    </button>
-</div>
+                
+                    <div class="toc-item next-right"><a href="../../guide/upgrade.html"><strong>3</strong><span>Upgrade</span> >></a></div>
+                
 
 
-<div class="paragraph">
-<p>To make it easier for users to use and upgrade, Profile adopts a version policy consistent with the <a href="https://github.com/graceframework/grace-framework">Grace Framework</a>.</p>
-</div>
-<table class="tableblock frame-all grid-all stretch">
-<colgroup>
-<col style="width: 50%;">
-<col style="width: 50%;">
-</colgroup>
-<tbody>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Profile Version</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Grace Version</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://github.com/grace-profiles/rest-api/tree/2023.3.x">2023.3.x</a></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">2023.3.x</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://github.com/grace-profiles/rest-api/tree/2023.2.x">2023.2.x</a></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">2023.2.x</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://github.com/grace-profiles/rest-api/tree/2023.1.x">2023.1.x</a></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">2023.1.x</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://github.com/grace-profiles/rest-api/tree/2023.0.x">2023.0.x</a></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">2023.0.x</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://github.com/grace-profiles/rest-api/tree/2022.2.x">2022.2.x</a></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">2022.2.x</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://github.com/grace-profiles/rest-api/tree/2022.1.x">2022.1.x</a></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">2022.1.x</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://github.com/grace-profiles/rest-api/tree/2022.0.x">2022.0.x</a></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">2022.0.x</p></td>
-</tr>
-</tbody>
-</table>
+                <div class="project">
+                    <h1>2.1 What's new in 2023.x</h1>
 
+                    <p><strong>Version:</strong> 2023.3.0-SNAPSHOT</p>
+                </div>
+
+                
+
+                
 
 <h2 id="2023.x"><a class="anchor" href="#2023.x"></a>2.1 What's new in 2023.x</h2>
 
@@ -996,239 +915,77 @@ function addJsClass(el) {
 </div>
 
 
-<h1 id="upgrade"><a class="anchor" href="#upgrade"></a>3 Upgrade</h1>
-
-<div class='contribute-btn'>
-    <button type='button' class='btn btn-default' onclick='window.location.href="https://github.com/grace-profiles/rest-api/edit/2023.3.x/docs/guide/upgrade.adoc"'>
-        <i class='fa fa-pencil-square-o'></i> Improve this doc
-    </button>
-</div>
-
-
-<div class="admonitionblock note">
-<table>
-<tr>
-<td class="icon">
-<i class="fa icon-note" title="Note"></i>
-</td>
-<td class="content">
-Currently, Grace framework does not provide a direct <code>upgrade</code> command, but it may offer this in the future.
-</td>
-</tr>
-</table>
-</div>
-<div class="paragraph">
-<p>The simplest way is to create two different versions of a new application, and then compare the differences between the two versions using the <code>git-diff</code> command.</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="CodeRay highlight"><code data-lang="console">$ sdk use grace 2023.3.0
-$ grace -v
-$ grace create-app com.example.myapp --profile=rest-api --grace-version=2023.2.0
-$ cd myapp
-$ git init &amp;&amp; git add . &amp;&amp; git commit -m &quot;Generated by Grace 2023.2.0&quot;
-$ cd ..
-$ grace create-app com.example.myapp --profile=rest-api --force
-$ cd myapp
-$ git diff</code></pre>
-</div>
-</div>
-
-
-<h1 id="profileinfo"><a class="anchor" href="#profileinfo"></a>4 Profile Info</h1>
-
-<div class='contribute-btn'>
-    <button type='button' class='btn btn-default' onclick='window.location.href="https://github.com/grace-profiles/rest-api/edit/2023.3.x/docs/guide/profileinfo.adoc"'>
-        <i class='fa fa-pencil-square-o'></i> Improve this doc
-    </button>
-</div>
-
-
-<div class="paragraph">
-<p>You can always get information about the provided command and available features executing
-<code>grace profile-info rest-api</code></p>
-</div>
-<div class="paragraph">
-<p>You will see an output similar to:</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="CodeRay highlight"><code data-lang="console">Profile: rest-api
-Version: 2023.3.0
-Extends: base
-Description: Profile for REST API applications
-
-Provided Commands:
-----------------------------------------------------------------------------------------------------
-Name                           Description
-----------------------------------------------------------------------------------------------------
-about                          About your application's environment
-assemble                       Creates a JAR or WAR archive for production deployment
-bug-report                     Creates a zip file that can be attached to issue reports for the current project [deprecated]
-clean                          Cleans a Grace application's compiled sources
-compile                        Compiles a Grace application
-console                        Runs the Grace interactive console
-create-command                 Creates an Application Command
-create-controller              Creates a Controller
-create-domain-class            Creates a Domain Class
-create-domain-resource         Creates a Domain Class that represents a resource
-create-functional-test         Creates a Functional Test
-create-integration-test        Creates an Integration Test
-create-interceptor             Creates an Interceptor
-create-plugin                  Creates a Dynamic Plugin
-create-restful-controller      Creates a REST Controller
-create-script                  Creates a Groovy Script
-create-service                 Creates a Service
-create-unit-test               Creates a Unit Test
-dependency-report              Prints out the Grace application's dependencies [deprecated]
-generate-all                   Generates a Controller that performs CRUD operations and the associated views
-generate-controller            Generates a Controller that performs REST operations
-generate-functional-test       Generates a Functional Test for a controller that performs REST operations
-generate-unit-test             Generates a Unit Test for a controller that performs REST operations
-generate-views                 Generates the Gson Views
-package                        Packages a Grace application
-run-app                        Runs a Grace application
-run-command                    Executes Grace commands
-run-script                     Executes Groovy scripts in a Grace context
-shell                          Runs the Grace interactive shell
-stats                          Prints statistics about the project
-stop-app                       Stops the running Grace application
-test-app                       Runs the applications tests
-
-Provided Features:
-----------------------------------------------------------------------------------------------------
-Name                           Required  Defaults  Description
-----------------------------------------------------------------------------------------------------
-asset-pipeline                                     Adds support for the Asset Pipeline to the Grace project
-async                                      +       Adds support for the Grace Async
-cache                                      +       Adds support for the Grace Cache abstraction
-database-migration                                 Adds support for Grace Database Migration Plugin
-events                                     +       Adds support for the Grace EventBus abstraction
-geb                                                Adds Geb 7, Selenium WebDriver 4.x to run functional tests
-gsp                                                Adds support for GSP to the project
-hibernate                                  +       Adds GORM for Hibernate to the project
-json-views                                 +       Adds support for JSON Views to the project
-markup-views                                       Adds support for Markup Views to the project
-mongodb                                            Adds GORM for MonogoDB to the project</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p>The above list includes all the commands and features from it&#8217;s parent profile.</p>
-</div>
-<div class="paragraph">
-<p>But if you want only show it&#8217;s own commands and features, you can execute <code>grace profile-info rest-api --only</code>.
-You will see thant <code>rest-api</code> profile provides some more commands and features below:</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="CodeRay highlight"><code data-lang="console">Profile: rest-api
-Version: 2023.3.0
-Extends: base
-Description: Profile for REST API applications
-
-Provided Commands:
-----------------------------------------------------------------------------------------------------
-Name                           Description
-----------------------------------------------------------------------------------------------------
-create-controller              Creates a Controller
-create-domain-resource         Creates a Domain Class that represents a resource
-create-functional-test         Creates a Functional Test
-create-integration-test        Creates an Integration Test
-create-interceptor             Creates an Interceptor
-create-restful-controller      Creates a REST Controller
-create-service                 Creates a Service
-generate-all                   Generates a Controller that performs CRUD operations and the associated views
-generate-controller            Generates a Controller that performs REST operations
-generate-functional-test       Generates a Functional Test for a controller that performs REST operations
-generate-unit-test             Generates a Unit Test for a controller that performs REST operations
-generate-views                 Generates the Gson Views
-
-Provided Features:
-----------------------------------------------------------------------------------------------------
-Name                           Required  Defaults  Description
-----------------------------------------------------------------------------------------------------</code></pre>
-</div>
-</div>
-
-
-<h1 id="support"><a class="anchor" href="#support"></a>5 Support</h1>
-
-<div class='contribute-btn'>
-    <button type='button' class='btn btn-default' onclick='window.location.href="https://github.com/grace-profiles/rest-api/edit/2023.3.x/docs/guide/support.adoc"'>
-        <i class='fa fa-pencil-square-o'></i> Improve this doc
-    </button>
-</div>
-
-
-<div class="paragraph">
-<p>For support, please use the <a href="https://github.com/orgs/graceframework/discussions">Grace Discussions</a> or open an issue on
-<a href="https://github.com/grace-profiles/plugin/issues">Github</a></p>
-</div>
-
-                    </div>
-                </td>
-                <td id="col2">
+                <div style="clear:both;margin-top:15px;"></div>
+                
+                    <div class="toc-item prev-left"><a href="../../guide/introduction.html">&lt;&lt; <strong>1</strong><span>Introduction</span></a></div>
+                
+                    <div class="toc-item next-right"><a href="../../guide/upgrade.html"><strong>3</strong><span>Upgrade</span> >></a></div>
+                
+                <div style="clear:both"></div>
+            </div>
+        </td>
+        <td id="col2">
             <div class="local clearfix">
                 <div class="local-title">
-                    <a href="../guide/index.html" target="mainFrame">Quick Reference</a>
+                    <a href="../../guide/index.html" target="mainFrame">Quick Reference</a>
                     <span class="toggle">(<a href="#" onclick="localToggle(); return false;">hide</a>)</span>
                 </div>
                 <div class="menu">
                     
                     <div class="menu-block"><h1 class="menu-title" onclick="toggleRef(this.parentNode.childNodes[1])">Commands</h1><div class="menu-sub">
                         
-                        
-                        <div class="menu-item"><a href="../ref/Commands/create-controller.html">create-controller</a>
-                        </div>
-                        
-                        <div class="menu-item"><a href="../ref/Commands/create-domain-resource.html">create-domain-resource</a>
-                        </div>
-                        
-                        <div class="menu-item"><a href="../ref/Commands/create-functional-test.html">create-functional-test</a>
-                        </div>
-                        
-                        <div class="menu-item"><a href="../ref/Commands/create-integration-test.html">create-integration-test</a>
-                        </div>
-                        
-                        <div class="menu-item"><a href="../ref/Commands/create-interceptor.html">create-interceptor</a>
-                        </div>
-                        
-                        <div class="menu-item"><a href="../ref/Commands/create-restful-controller.html">create-restful-controller</a>
-                        </div>
-                        
-                        <div class="menu-item"><a href="../ref/Commands/create-service.html">create-service</a>
-                        </div>
-                        
-                        <div class="menu-item"><a href="../ref/Commands/generate-all.html">generate-all</a>
-                        </div>
-                        
-                        <div class="menu-item"><a href="../ref/Commands/generate-controller.html">generate-controller</a>
-                        </div>
-                        
-                        <div class="menu-item"><a href="../ref/Commands/generate-functional-test.html">generate-functional-test</a>
-                        </div>
-                        
-                        <div class="menu-item"><a href="../ref/Commands/generate-unit-test.html">generate-unit-test</a>
-                        </div>
-                        
-                        <div class="menu-item"><a href="../ref/Commands/generate-views.html">generate-views</a>
-                        </div>
-                        
-                        </div>
+                            
+                            <div class="menu-item"><a href="../../ref/Commands/create-controller.html">create-controller</a>
+                            </div>
+                            
+                            <div class="menu-item"><a href="../../ref/Commands/create-domain-resource.html">create-domain-resource</a>
+                            </div>
+                            
+                            <div class="menu-item"><a href="../../ref/Commands/create-functional-test.html">create-functional-test</a>
+                            </div>
+                            
+                            <div class="menu-item"><a href="../../ref/Commands/create-integration-test.html">create-integration-test</a>
+                            </div>
+                            
+                            <div class="menu-item"><a href="../../ref/Commands/create-interceptor.html">create-interceptor</a>
+                            </div>
+                            
+                            <div class="menu-item"><a href="../../ref/Commands/create-restful-controller.html">create-restful-controller</a>
+                            </div>
+                            
+                            <div class="menu-item"><a href="../../ref/Commands/create-service.html">create-service</a>
+                            </div>
+                            
+                            <div class="menu-item"><a href="../../ref/Commands/generate-all.html">generate-all</a>
+                            </div>
+                            
+                            <div class="menu-item"><a href="../../ref/Commands/generate-controller.html">generate-controller</a>
+                            </div>
+                            
+                            <div class="menu-item"><a href="../../ref/Commands/generate-functional-test.html">generate-functional-test</a>
+                            </div>
+                            
+                            <div class="menu-item"><a href="../../ref/Commands/generate-unit-test.html">generate-unit-test</a>
+                            </div>
+                            
+                            <div class="menu-item"><a href="../../ref/Commands/generate-views.html">generate-views</a>
+                            </div>
+                            
+                            </div>
                     </div>
                     
                 </div>
             </div>
         </td>
-            </tr>
-        </table>
+    </tr>
+</table>
 
-        <div id="footer">
-            Copyright &copy; 2022-2025 Michael Yan and the original authors. The content is licensed under a Creative Commons Attribution 4.0 International (CC BY SA 4.0) license.
-            
-        </div>
+<div id="footer">
+    Copyright &copy; 2022-2025 Michael Yan and the original authors. The content is licensed under a Creative Commons Attribution 4.0 International (CC BY SA 4.0) license.
+    
+</div>
 
 <script type="text/javascript" src="../js/docs.js"></script>
 
-    </body>
+</body>
 </html>
