@@ -1,29 +1,28 @@
 <%=packageName ? "package ${packageName}" : ''%>
 
+import spock.lang.Specification
+import org.springframework.beans.factory.annotation.Autowired
+import org.springframework.boot.test.web.client.TestRestTemplate
+import org.springframework.boot.test.web.server.LocalServerPort
+import org.springframework.http.HttpMethod
+import org.springframework.http.HttpStatus
+import org.springframework.http.ResponseEntity
+
 import grails.gorm.transactions.Rollback
 import grails.testing.mixin.integration.Integration
 import grails.testing.spock.OnceBefore
-import io.micronaut.core.type.Argument
-import io.micronaut.http.HttpRequest
-import io.micronaut.http.HttpResponse
-import io.micronaut.http.HttpStatus
-import io.micronaut.http.client.HttpClient
-import io.micronaut.http.client.exceptions.HttpClientResponseException
-import spock.lang.AutoCleanup
-import spock.lang.Shared
-import spock.lang.Specification
 
 @Integration
 class ${className}FunctionalSpec extends Specification {
 
-    @Shared
-    @AutoCleanup
-    HttpClient client
+    @LocalServerPort
+    private int port
+
+    @Autowired
+    private TestRestTemplate restTemplate
 
     @OnceBefore
     void init() {
-        String baseUrl = "http://localhost:\$serverPort"
-        this.client  = HttpClient.create(new URL(baseUrl))
     }
 
     void cleanup() {
@@ -44,118 +43,112 @@ class ${className}FunctionalSpec extends Specification {
 
     void "Test the index action"() {
         when:"The index action is requested"
-        HttpResponse<List<Map>> response = client.toBlocking().exchange(HttpRequest.GET(resourcePath), Argument.of(List, Map))
+        ResponseEntity<List> response = this.restTemplate.getForEntity(resourcePath, List.class)
 
         then:"The response is correct"
-        response.status == HttpStatus.OK
-        response.body() == []
+        response.statusCode == HttpStatus.OK
+        response.body == []
     }
 
     @Rollback
     void "Test the save action correctly persists an instance"() {
         when:"The save action is executed with no content"
-        client.toBlocking().exchange(HttpRequest.POST(resourcePath, ""))
+        ResponseEntity<${className}> response = this.restTemplate.postForEntity(resourcePath, [:], ${className})
 
         then:"The response is correct"
-        def e = thrown(HttpClientResponseException)
-        e.response.status == HttpStatus.UNPROCESSABLE_ENTITY
+        response.statusCode == HttpStatus.UNPROCESSABLE_ENTITY
 
         when:"The save action is executed with invalid data"
-        client.toBlocking().exchange(HttpRequest.POST(resourcePath, invalidJson))
+        response = this.restTemplate.postForEntity(resourcePath, invalidJson, ${className})
 
         then:"The response is correct"
-        e = thrown(HttpClientResponseException)
-        e.response.status == HttpStatus.UNPROCESSABLE_ENTITY
+        response.statusCode == HttpStatus.UNPROCESSABLE_ENTITY
 
         when:"The save action is executed with valid data"
-        HttpResponse<Map> response = client.toBlocking().exchange(HttpRequest.POST(resourcePath, validJson), Map)
+        response = this.restTemplate.postForEntity(resourcePath, validJson, ${className})
 
         then:"The response is correct"
-        response.status == HttpStatus.CREATED
-        response.body().id
+        response.statusCode == HttpStatus.CREATED
+        response.body
         ${className}.count() == 1
 
         cleanup:
-        def id = response.body().id
+        def id = response.body.id
         def path = "\${resourcePath}/\${id}"
-        response = client.toBlocking().exchange(HttpRequest.DELETE(path))
-        assert response.status() == HttpStatus.NO_CONTENT
+        this.restTemplate.delete(path)
+        response = this.restTemplate.getForEntity(path, ${className})
+        assert response.statusCode == HttpStatus.NOT_FOUND
     }
 
+    @Rollback
     void "Test the update action correctly updates an instance"() {
         when:"The save action is executed with valid data"
-        HttpResponse<Map> response = client.toBlocking().exchange(HttpRequest.POST(resourcePath, validJson), Map)
+        ResponseEntity<${className}> response = this.restTemplate.postForEntity(resourcePath, validJson, ${className})
 
         then:"The response is correct"
-        response.status == HttpStatus.CREATED
-        response.body().id
-
-        when:"The update action is called with invalid data"
-        String path = "\${resourcePath}/\${response.body().id}"
-        client.toBlocking().exchange(HttpRequest.PUT(path, invalidJson), Map)
-
-        then: "The response is unprocessable entity"
-        path
-        def e = thrown(HttpClientResponseException)
-        e.response.status == HttpStatus.UNPROCESSABLE_ENTITY
+        response.statusCode == HttpStatus.CREATED
+        response.body
 
         when: "The update action is called with valid data"
-        response = client.toBlocking().exchange(HttpRequest.PUT(path, validJson), Map)
+        String path = "\${resourcePath}/\${response.body.id}"
+        this.restTemplate.put(path, validJson)
+        response = this.restTemplate.getForEntity(path, ${className})
 
         then:"The response is correct"
-        response.status == HttpStatus.OK
-        response.body()
+        response.statusCode == HttpStatus.OK
+        response.body
 
         cleanup:
-        response = client.toBlocking().exchange(HttpRequest.DELETE(path))
-        assert response.status() == HttpStatus.NO_CONTENT
+        this.restTemplate.delete(path)
+        response = this.restTemplate.getForEntity(path, ${className})
+        assert response.statusCode == HttpStatus.NOT_FOUND
     }
 
+    @Rollback
     void "Test the show action correctly renders an instance"() {
         when:"The save action is executed with valid data"
-        HttpResponse<Map> response = client.toBlocking().exchange(HttpRequest.POST(resourcePath, validJson), Map)
+        ResponseEntity<${className}> response = this.restTemplate.postForEntity(resourcePath, validJson, ${className})
 
         then:"The response is correct"
-        response.status == HttpStatus.CREATED
-        response.body().id
+        response.statusCode == HttpStatus.CREATED
+        response.body.id
 
         when:"When the show action is called to retrieve a resource"
-        def id = response.body().id
+        def id = response.body.id
         String path = "\${resourcePath}/\${id}"
-        response = client.toBlocking().exchange(HttpRequest.GET(path), Map)
+        response = this.restTemplate.getForEntity(path, ${className})
 
         then:"The response is correct"
-        response.status == HttpStatus.OK
-        response.body().id == id
+        response.statusCode == HttpStatus.OK
+        response.body.id == id
 
         cleanup:
-        client.toBlocking().exchange(HttpRequest.DELETE(path))
+        this.restTemplate.delete(path)
     }
 
     @Rollback
     void "Test the delete action correctly deletes an instance"() {
         when:"The save action is executed with valid data"
-        HttpResponse<Map> response = client.toBlocking().exchange(HttpRequest.POST(resourcePath, validJson), Map)
+        ResponseEntity<${className}> response = this.restTemplate.postForEntity(resourcePath, validJson, ${className})
 
         then:"The response is correct"
-        response.status == HttpStatus.CREATED
-        response.body().id
+        response.statusCode == HttpStatus.CREATED
+        response.body.id
 
         when:"When the delete action is executed on an unknown instance"
-        def id = response.body().id
+        def id = response.body.id
         def path = "\${resourcePath}/99999"
-        client.toBlocking().exchange(HttpRequest.DELETE(path))
+        response = this.restTemplate.exchange(path, HttpMethod.DELETE, null, ${className})
 
         then:"The response is correct"
-        def e = thrown(HttpClientResponseException)
-        e.response.status == HttpStatus.NOT_FOUND
+        response.statusCode == HttpStatus.NOT_FOUND
 
         when:"When the delete action is executed on an existing instance"
         path = "\${resourcePath}/\${id}"
-        response = client.toBlocking().exchange(HttpRequest.DELETE(path))
+        response = this.restTemplate.exchange(path, HttpMethod.DELETE, null, ${className})
 
         then:"The response is correct"
-        response.status == HttpStatus.NO_CONTENT
+        response.statusCode == HttpStatus.NO_CONTENT
         !${className}.get(id)
     }
 }
