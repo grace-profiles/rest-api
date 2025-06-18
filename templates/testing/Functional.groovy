@@ -17,7 +17,7 @@ class @artifact.name@Spec extends Specification {
 
     void "Test the homepage"() {
         when: "The home page is requested"
-        String message = this.restTemplate.getForObject("http://localhost:" + port + "/", String.class))
+        String message = this.restTemplate.getForObject("http://localhost:" + port + "/", String)
 
         then: "The response is correct"
         message.contains('Welcome to Grace')
