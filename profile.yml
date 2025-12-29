@@ -5,7 +5,7 @@ features:
         - cache
         - events
         - hibernate
-        - json-views
+        - rest
 build:
     plugins:
         - war
@@ -16,44 +16,14 @@ dependencies:
     - scope: console
       coords: "org.graceframework:grace-console"
     - scope: compile
-      coords: "org.springframework.boot:spring-boot-starter-actuator"
+      coords: "org.graceframework:grace-boot-logging"
     - scope: compile
-      coords: "org.springframework.boot:spring-boot-starter-logging"
+      coords: "org.graceframework:grace-boot-persistence"
     - scope: compile
-      coords: "org.springframework.boot:spring-boot-starter-validation"
+      coords: "org.graceframework:grace-boot-plugin"
     - scope: compile
-      coords: "org.springframework.boot:spring-boot-starter-web"
+      coords: "org.graceframework:grace-boot-validation"
     - scope: compile
-      coords: "org.graceframework:grace-boot"
-    - scope: compile
-      coords: "org.graceframework:grace-core"
-    - scope: compile
-      coords: "org.graceframework:grace-logging"
-    - scope: compile
-      coords: "org.graceframework:grace-plugin-codecs"
-    - scope: compile
-      coords: "org.graceframework:grace-plugin-controllers"
-    - scope: compile
-      coords: "org.graceframework:grace-plugin-converters"
-    - scope: compile
-      coords: "org.graceframework:grace-plugin-databinding"
-    - scope: compile
-      coords: "org.graceframework:grace-plugin-datasource"
-    - scope: compile
-      coords: "org.graceframework:grace-plugin-domain-class"
-    - scope: compile
-      coords: "org.graceframework:grace-plugin-i18n"
-    - scope: compile
-      coords: "org.graceframework:grace-plugin-interceptors"
-    - scope: compile
-      coords: "org.graceframework:grace-plugin-management"
-    - scope: compile
-      coords: "org.graceframework:grace-plugin-rest"
+      coords: "org.graceframework:grace-boot-web"
     - scope: compile
       coords: "org.graceframework:grace-plugin-services"
-    - scope: compile
-      coords: "org.graceframework:grace-plugin-url-mappings"
-    - scope: testCompile
-      coords: "org.graceframework:grace-test-support"
-    - scope: testCompile
-      coords: "org.graceframework:views-json-testing-support"
