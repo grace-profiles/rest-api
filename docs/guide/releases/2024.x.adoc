@@ -1,0 +1,32 @@
+=== 2023.3.0-M1
+
+link:{github}/releases/tag/v2023.3.0-M1[release notes]
+
+🛠 Improvements
+
+* Add release notes for 2024.0.0-M1
+* Add issue template
+* Update profile.yml: migrate to the new coords of the dependecies
+* Use `Metadata.current` instead of `grailsApplication.metadata` to get the application version
+
+* Update README
+  - Update document links
+  - Update badge version of Grace
+  - Update supported versions
+
+* Update README - Update badge version of Grace, Groovy
+
+🚀 Dependency Upgrades
+
+* Upgrade to Grace 2024.0.0-M1 link:{github}/issues/50[#50]
+* Upgrade to Grace Profile: Base 2024.0.0-M1 link:{github}/issues/52[#52]
+* Upgrade to Gradle 8.14.3 link:{github}/issues/51[#51]
+* Migrate to Central Portal OSSRH Staging API link:{github}/issues/48[#48]
+
+⚙️ Tasks
+
+* Release v2024.0.0-M1
+* Update GitHub workflows - Switch to 2024.0.x
+* Next development version: 2024.0.0-SNAPSHOT
+* Update guides for profile info and upgrade
+* Update doc.properties and switch to 2024.0.x branch
