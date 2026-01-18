@@ -86,6 +86,10 @@ jar {
         "Implementation-Vendor": 'graceframework.org')
 }
 
+tasks.register('docs') {
+    dependsOn publishGuide
+}
+
 publishing {
     publications {
         maven(MavenPublication) {
