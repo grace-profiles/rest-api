@@ -1,4 +1,4 @@
-import org.grails.cli.interactive.completers.DomainClassCompleter
+import org.grails.cli.command.completers.DomainClassCompleter
 
 description( "Generates a Unit Test for a controller that performs REST operations" ) {
   usage "grace generate-unit-test [Domain Class]"

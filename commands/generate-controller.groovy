@@ -1,4 +1,4 @@
-import org.grails.cli.interactive.completers.DomainClassCompleter
+import org.grails.cli.command.completers.DomainClassCompleter
 
 description( "Generates a Controller that performs REST operations" ) {
   usage "grace generate-controller [Domain Class]"

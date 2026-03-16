@@ -1,7 +1,7 @@
 description:
     - Creates a REST Controller
     - usage: 'grace create-restful-controller [Domain Class]'
-    - completer: org.grails.cli.interactive.completers.DomainClassCompleter
+    - completer: org.grails.cli.command.completers.DomainClassCompleter
     - argument: Domain Class
       description: The name of the Domain Class
     - flag: force

@@ -1,4 +1,4 @@
-import org.grails.cli.interactive.completers.DomainClassCompleter
+import org.grails.cli.command.completers.DomainClassCompleter
 
 description( "Generates the Gson Views" ) {
   usage "grace generate-views [Domain Class]"
