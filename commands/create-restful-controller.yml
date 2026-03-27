@@ -1,17 +1,17 @@
 description:
-    - Creates a REST Controller
-    - usage: 'grace create-restful-controller [Domain Class]'
-    - completer: org.grails.cli.command.completers.DomainClassCompleter
-    - argument: Domain Class
-      description: The name of the Domain Class
-    - flag: force
-      description: Whether to override existing files
+  - Creates a REST Controller
+  - usage: "grace create-restful-controller [Domain Class]"
+  - completer: org.grails.cli.command.completers.DomainClassCompleter
+  - argument: Domain Class
+    description: The name of the Domain Class
+  - flag: force
+    description: Whether to override existing files
 steps:
- - command: render
-   template: templates/artifacts/RestfulController.groovy
-   convention: Controller
-   destination: app/controllers/@artifact.package.path@/@artifact.name@Controller.groovy
- # - command: render
- #   template: templates/testing/Controller.groovy
- #   convention: Controller
- #   destination: src/test/groovy/@artifact.package.path@/@artifact.name@ControllerSpec.groovy
+  - command: render
+    template: templates/artifacts/RestfulController.groovy
+    convention: Controller
+    destination: app/controllers/@artifact.package.path@/@artifact.name@Controller.groovy
+  # - command: render
+  #   template: templates/testing/Controller.groovy
+  #   convention: Controller
+  #   destination: src/test/groovy/@artifact.package.path@/@artifact.name@ControllerSpec.groovy

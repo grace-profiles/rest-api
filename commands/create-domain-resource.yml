@@ -1,14 +1,14 @@
 description:
-    - Creates a Domain Class that represents a resource
-    - usage: 'grace create-domain-resource [Resource Name]'
-    - argument: Resource Name
-      description: The name of the Resource
-    - flag: force
-      description: Whether to override existing files
+  - Creates a Domain Class that represents a resource
+  - usage: "grace create-domain-resource [Resource Name]"
+  - argument: Resource Name
+    description: The name of the Resource
+  - flag: force
+    description: Whether to override existing files
 steps:
- - command: render
-   template: templates/artifacts/Resource.groovy
-   destination: app/domain/@artifact.package.path@/@artifact.name@.groovy
- - command: render
-   template: templates/testing/Resource.groovy
-   destination: src/test/groovy/@artifact.package.path@/@artifact.name@Spec.groovy
+  - command: render
+    template: templates/artifacts/Resource.groovy
+    destination: app/domain/@artifact.package.path@/@artifact.name@.groovy
+  - command: render
+    template: templates/testing/Resource.groovy
+    destination: src/test/groovy/@artifact.package.path@/@artifact.name@Spec.groovy

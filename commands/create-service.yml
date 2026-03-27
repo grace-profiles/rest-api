@@ -1,17 +1,17 @@
 description:
-    - Creates a Service
-    - usage: 'grace create-service [Service Name]'
-    - completer: org.grails.cli.command.completers.DomainClassCompleter
-    - argument: "Service Name"
-      description: "The name of the Service"
-    - flag: force
-      description: Whether to override existing files
+  - Creates a Service
+  - usage: "grace create-service [Service Name]"
+  - completer: org.grails.cli.command.completers.DomainClassCompleter
+  - argument: "Service Name"
+    description: "The name of the Service"
+  - flag: force
+    description: Whether to override existing files
 steps:
- - command: render
-   template: templates/artifacts/Service.groovy
-   destination: app/services/@artifact.package.path@/@artifact.name@Service.groovy
-   convention: Service
- - command: render
-   template: templates/testing/Service.groovy
-   destination: src/test/groovy/@artifact.package.path@/@artifact.name@ServiceSpec.groovy
-   convention: Service
+  - command: render
+    template: templates/artifacts/Service.groovy
+    destination: app/services/@artifact.package.path@/@artifact.name@Service.groovy
+    convention: Service
+  - command: render
+    template: templates/testing/Service.groovy
+    destination: src/test/groovy/@artifact.package.path@/@artifact.name@ServiceSpec.groovy
+    convention: Service
