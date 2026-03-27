@@ -15,7 +15,7 @@ json {
     int errorCount = allErrors.size()
     def resourcePath = g.link(resource:request.uri, absolute:false)
     def resourceLink = g.link(resource:request.uri, absolute:true)
-    if(errorCount == 1) {
+    if (errorCount == 1) {
         def error = allErrors.iterator().next()
         message messageSource.getMessage(error, locale)
         path resourcePath
