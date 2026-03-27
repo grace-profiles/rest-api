@@ -42,32 +42,32 @@ class ${className}FunctionalSpec extends Specification {
     }
 
     void "Test the index action"() {
-        when:"The index action is requested"
+        when: "The index action is requested"
         ResponseEntity<List> response = this.restTemplate.getForEntity(resourcePath, List.class)
 
-        then:"The response is correct"
+        then: "The response is correct"
         response.statusCode == HttpStatus.OK
         response.body == []
     }
 
     @Rollback
     void "Test the save action correctly persists an instance"() {
-        when:"The save action is executed with no content"
+        when: "The save action is executed with no content"
         ResponseEntity<${className}> response = this.restTemplate.postForEntity(resourcePath, [:], ${className})
 
-        then:"The response is correct"
+        then: "The response is correct"
         response.statusCode == HttpStatus.UNPROCESSABLE_ENTITY
 
-        when:"The save action is executed with invalid data"
+        when: "The save action is executed with invalid data"
         response = this.restTemplate.postForEntity(resourcePath, invalidJson, ${className})
 
-        then:"The response is correct"
+        then: "The response is correct"
         response.statusCode == HttpStatus.UNPROCESSABLE_ENTITY
 
-        when:"The save action is executed with valid data"
+        when: "The save action is executed with valid data"
         response = this.restTemplate.postForEntity(resourcePath, validJson, ${className})
 
-        then:"The response is correct"
+        then: "The response is correct"
         response.statusCode == HttpStatus.CREATED
         response.body
         ${className}.count() == 1
@@ -82,10 +82,10 @@ class ${className}FunctionalSpec extends Specification {
 
     @Rollback
     void "Test the update action correctly updates an instance"() {
-        when:"The save action is executed with valid data"
+        when: "The save action is executed with valid data"
         ResponseEntity<${className}> response = this.restTemplate.postForEntity(resourcePath, validJson, ${className})
 
-        then:"The response is correct"
+        then: "The response is correct"
         response.statusCode == HttpStatus.CREATED
         response.body
 
@@ -94,7 +94,7 @@ class ${className}FunctionalSpec extends Specification {
         this.restTemplate.put(path, validJson)
         response = this.restTemplate.getForEntity(path, ${className})
 
-        then:"The response is correct"
+        then: "The response is correct"
         response.statusCode == HttpStatus.OK
         response.body
 
@@ -106,19 +106,19 @@ class ${className}FunctionalSpec extends Specification {
 
     @Rollback
     void "Test the show action correctly renders an instance"() {
-        when:"The save action is executed with valid data"
+        when: "The save action is executed with valid data"
         ResponseEntity<${className}> response = this.restTemplate.postForEntity(resourcePath, validJson, ${className})
 
-        then:"The response is correct"
+        then: "The response is correct"
         response.statusCode == HttpStatus.CREATED
         response.body.id
 
-        when:"When the show action is called to retrieve a resource"
+        when: "When the show action is called to retrieve a resource"
         def id = response.body.id
         String path = "\${resourcePath}/\${id}"
         response = this.restTemplate.getForEntity(path, ${className})
 
-        then:"The response is correct"
+        then: "The response is correct"
         response.statusCode == HttpStatus.OK
         response.body.id == id
 
@@ -128,27 +128,28 @@ class ${className}FunctionalSpec extends Specification {
 
     @Rollback
     void "Test the delete action correctly deletes an instance"() {
-        when:"The save action is executed with valid data"
+        when: "The save action is executed with valid data"
         ResponseEntity<${className}> response = this.restTemplate.postForEntity(resourcePath, validJson, ${className})
 
-        then:"The response is correct"
+        then: "The response is correct"
         response.statusCode == HttpStatus.CREATED
         response.body.id
 
-        when:"When the delete action is executed on an unknown instance"
+        when: "When the delete action is executed on an unknown instance"
         def id = response.body.id
         def path = "\${resourcePath}/99999"
         response = this.restTemplate.exchange(path, HttpMethod.DELETE, null, ${className})
 
-        then:"The response is correct"
+        then: "The response is correct"
         response.statusCode == HttpStatus.NOT_FOUND
 
-        when:"When the delete action is executed on an existing instance"
+        when: "When the delete action is executed on an existing instance"
         path = "\${resourcePath}/\${id}"
         response = this.restTemplate.exchange(path, HttpMethod.DELETE, null, ${className})
 
-        then:"The response is correct"
+        then: "The response is correct"
         response.statusCode == HttpStatus.NO_CONTENT
         !${className}.get(id)
     }
+
 }

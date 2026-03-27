@@ -22,4 +22,5 @@ class @artifact.name@Spec extends Specification {
         then: "The response is correct"
         message.contains('Welcome to Grace')
     }
+
 }

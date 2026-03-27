@@ -46,7 +46,7 @@ class ${className}Controller {
             return
         }
 
-        respond ${propertyName}, [status: CREATED, view:"show"]
+        respond ${propertyName}, [status: CREATED, view: "show"]
     }
 
     @Transactional
@@ -68,7 +68,7 @@ class ${className}Controller {
             return
         }
 
-        respond ${propertyName}, [status: OK, view:"show"]
+        respond ${propertyName}, [status: OK, view: "show"]
     }
 
     @Transactional
@@ -80,4 +80,5 @@ class ${className}Controller {
 
         render status: NO_CONTENT
     }
+
 }

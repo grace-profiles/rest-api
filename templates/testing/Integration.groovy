@@ -14,8 +14,9 @@ class @artifact.name@Spec extends Specification {
     def cleanup() {
     }
 
-    void "test something"() {
-        expect:"fix me"
+    void 'test something'() {
+        expect: 'fix me'
             true == false
     }
+
 }

@@ -11,8 +11,9 @@ class @artifact.name@ServiceSpec extends Specification implements ServiceUnitTes
     def cleanup() {
     }
 
-    void "test something"() {
-        expect:"fix me"
+    void 'test something'() {
+        expect: 'fix me'
             true == false
     }
+
 }

@@ -11,8 +11,9 @@ class @artifact.name@ControllerSpec extends Specification implements ControllerU
     def cleanup() {
     }
 
-    void "test something"() {
-        expect:"fix me"
+    void 'test something'() {
+        expect: 'fix me'
         true == false
     }
+
 }

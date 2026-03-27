@@ -32,10 +32,10 @@ class ${className}ControllerSpec extends Specification implements ControllerUnit
             1 * count() >> 0
         }
 
-        when:"The index action is executed"
+        when: "The index action is executed"
             controller.index()
 
-        then:"The response is correct"
+        then: "The response is correct"
             response.text == '[]'
     }
 
@@ -95,10 +95,10 @@ class ${className}ControllerSpec extends Specification implements ControllerUnit
             1 * get(null) >> null
         }
 
-        when:"The show action is executed with a null domain"
+        when: "The show action is executed with a null domain"
         controller.show()
 
-        then:"A 404 error is returned"
+        then: "A 404 error is returned"
         response.status == NOT_FOUND.value()
     }
 
@@ -108,11 +108,11 @@ class ${className}ControllerSpec extends Specification implements ControllerUnit
             1 * get(2) >> new ${className}()
         }
 
-        when:"A domain instance is passed to the show action"
+        when: "A domain instance is passed to the show action"
         params.id = 2
         controller.show()
 
-        then:"A model is populated containing the domain instance"
+        then: "A model is populated containing the domain instance"
         response.status == OK.value()
         response.json == [:]
     }
@@ -194,4 +194,5 @@ class ${className}ControllerSpec extends Specification implements ControllerUnit
         then:
         response.status == NO_CONTENT.value()
     }
+
 }
