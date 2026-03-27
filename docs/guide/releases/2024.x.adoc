@@ -1,3 +1,25 @@
+=== 2024.0.0
+
+link:{github}/releases/tag/v2024.0.0[release notes]
+
+🛠 Improvements
+
+* Add release notes for 2024.0.0-RC1
+* Update README - Update badge versions of Grace and Groovy
+* Code formatting for skeleton link:{github}/issues/61[#61]
+* Code formatting for all templates link:{github}/issues/60[#60]
+* Code formatting for all commands link:{github}/issues/59[#59]
+* Commands: change the package name of completer to `org.grails.cli.command.completers` link:{github}/issues/57[#57]
+
+🚀 Dependency Upgrades
+
+* Upgrade to Grace 2024.0.0-RC1 link:{github}/issues/56[#56]
+* Upgrade to Grace Profile: Base 2024.0.0 link:{github}/issues/58[#58]
+
+⚙️ Tasks
+
+* Release v2024.0.0
+
 === 2024.0.0-RC1
 
 link:{github}/releases/tag/v2024.0.0-RC1[release notes]
