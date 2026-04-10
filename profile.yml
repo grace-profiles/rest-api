@@ -12,7 +12,7 @@ skeleton:
 build:
     plugins:
         - war
-        - org.graceframework.grace-web
+        - org.graceframework.grace-app
     excludes:
         - org.graceframework.grace-core
 dependencies:
