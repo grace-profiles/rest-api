@@ -6,6 +6,9 @@ features:
         - events
         - hibernate
         - rest
+skeleton:
+    excludes:
+        - app/i18n/*.properties
 build:
     plugins:
         - war
