@@ -4,7 +4,7 @@ import grails.gorm.transactions.Transactional
 @Transactional
 class @artifact.name@Service {
 
-    def serviceMethod() {
-
+    def create@artifact.name@() {
     }
+
 }

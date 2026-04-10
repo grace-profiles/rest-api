@@ -9,14 +9,13 @@ class @artifact.name@InterceptorSpec extends Specification implements Intercepto
     }
 
     def cleanup() {
-
     }
 
-    void "Test @artifact.propertyName@ interceptor matching"() {
-        when: "A request matches the interceptor"
-        withRequest(controller: "@artifact.propertyName@")
+    void 'Test @artifact.propertyName@ interceptor matching'() {
+        when: 'A request matches the interceptor'
+        withRequest(controller: '@artifact.propertyName@')
 
-        then: "The interceptor does match"
+        then: 'The interceptor does match'
         interceptor.doesMatch()
     }
 

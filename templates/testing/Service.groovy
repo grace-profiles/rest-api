@@ -13,7 +13,7 @@ class @artifact.name@ServiceSpec extends Specification implements ServiceUnitTes
 
     void 'test something'() {
         expect: 'fix me'
-            true == false
+        true == false
     }
 
 }

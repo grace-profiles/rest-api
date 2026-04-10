@@ -1,20 +1,20 @@
 <%=packageName ? "package ${packageName}" : ''%>
 
+import grails.gorm.transactions.ReadOnly
+import grails.gorm.transactions.Transactional
+import grails.validation.ValidationException
+
 import static org.springframework.http.HttpStatus.CREATED
 import static org.springframework.http.HttpStatus.NOT_FOUND
 import static org.springframework.http.HttpStatus.NO_CONTENT
 import static org.springframework.http.HttpStatus.OK
 import static org.springframework.http.HttpStatus.UNPROCESSABLE_ENTITY
 
-import grails.gorm.transactions.ReadOnly
-import grails.gorm.transactions.Transactional
-import grails.validation.ValidationException
-
 @ReadOnly
 class ${className}Controller {
 
     static responseFormats = ['json', 'xml']
-    static allowedMethods = [save: "POST", update: "PUT", delete: "DELETE"]
+    static allowedMethods = [save: 'POST', update: 'PUT', delete: 'DELETE']
 
     ${className}Service ${propertyName}Service
 
@@ -46,7 +46,7 @@ class ${className}Controller {
             return
         }
 
-        respond ${propertyName}, [status: CREATED, view: "show"]
+        respond ${propertyName}, [status: CREATED, view: 'show']
     }
 
     @Transactional
@@ -68,7 +68,7 @@ class ${className}Controller {
             return
         }
 
-        respond ${propertyName}, [status: OK, view: "show"]
+        respond ${propertyName}, [status: OK, view: 'show']
     }
 
     @Transactional
