@@ -20,7 +20,7 @@ if (args) {
         if (sourceClass) {
             def model = model(sourceClass)
 
-            render template: template('artifacts/scaffolding/Spec.groovy'),
+            render template: template('artifacts/scaffolding/ControllerSpec.groovy'),
                 destination: file("src/test/groovy/${model.packagePath}/${model.convention('ControllerSpec')}.groovy"),
                 model: model,
                 overwrite: overwrite
