@@ -2,7 +2,6 @@
 
 import spock.lang.*
 
-import grails.plugin.json.view.JsonViewGrailsPlugin
 import grails.testing.web.controllers.ControllerUnitTest
 import grails.testing.gorm.DomainUnitTest
 import grails.validation.ValidationException
@@ -14,10 +13,6 @@ import static org.springframework.http.HttpStatus.OK
 import static org.springframework.http.HttpStatus.UNPROCESSABLE_ENTITY
 
 class ${className}ControllerSpec extends Specification implements ControllerUnitTest<${className}Controller>, DomainUnitTest<${className}> {
-
-    void setupSpec() {
-        defineBeans(new JsonViewGrailsPlugin(applicationContext: applicationContext))
-    }
 
     def populateValidParams(params) {
         assert params != null
