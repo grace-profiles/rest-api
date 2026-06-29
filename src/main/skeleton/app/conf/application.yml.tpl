@@ -19,6 +19,13 @@ spring:
                 - '*.gson'
                 - '**/*.gson'
                 - 'logback.groovy'
-                - '*.properties'
+                - '*.properties'<% if (project.hasFeature('hibernate')) { %>
     jpa:
-        open-in-view: false
+        open-in-view: false<% } %>
+management:
+    endpoints:
+        enabled-by-default: true
+        web:
+            base-path: '/actuator'
+            exposure:
+                include: '*'
