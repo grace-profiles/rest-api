@@ -1,3 +1,23 @@
+=== 2024.2.0
+
+link:{github}/releases/tag/v2024.2.0[release notes]
+
+🛠 Improvements
+
+* Add release notes for 2024.2.0
+* Update README - Update the badget version of Grace
+* dcff851 Add HELP.md link:{github}/issues/89[#89]
+
+🚀 Dependency Upgrades
+
+* 0b8815f Upgrade to Grace 2024.1.2 link:{github}/issues/87[#87]
+* 7084a25 Upgrade to Grace Profile: Base 2024.2.0 link:{github}/issues/90[#90]
+* 6a2a73c Upgrade Java version in sdkmanrc to 17.0.20-zulu link:{github}/issues/88[#88]
+
+⚙️ Tasks
+
+* Release v2024.2.0
+
 === 2024.2.0-M1
 
 link:{github}/releases/tag/v2024.2.0-M1[release notes]
@@ -7,12 +27,12 @@ link:{github}/releases/tag/v2024.2.0-M1[release notes]
 * Add release notes for 2024.2.0-M1
 * Update doc.properties - switch to 2024.2.x branch
 * Update README - Update the badget version of Grace - Update the document link
-* Move Base's skeleton into the rest-api's own skeleton Closes gh-85
+* Move Base's skeleton into the rest-api's own skeleton link:{github}/issues/85[#85]
 
 🚀 Dependency Upgrades
 
-* Upgrade to Grace 2024.1.1 Closes gh-84
-* Upgrade to Grace Profile: Base 2024.2.0-M1 Closes gh-86
+* Upgrade to Grace 2024.1.1 link:{github}/issues/84[#84]
+* Upgrade to Grace Profile: Base 2024.2.0-M1 link:{github}/issues/86[#86]
 
 ⚙️ Tasks
 
