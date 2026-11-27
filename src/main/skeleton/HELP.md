@@ -4,10 +4,10 @@
 
 For further reference, please consider the following sections:
 
-* [Official Gradle documentation](https://docs.gradle.org/8.14.8/userguide/userguide.html)
-* [Spring Boot Gradle Plugin Reference Guide](https://docs.spring.io/spring-boot/3.5/gradle-plugin/index.html)
-* [Spring Web](https://docs.spring.io/spring-boot/3.5/reference/web/index.html)
-* [Groovy Documentation](https://docs.groovy-lang.org/docs/groovy-4.0.33/html/documentation/)
+* [Official Gradle documentation](https://docs.gradle.org/9.9.2/userguide/userguide.html)
+* [Spring Boot Gradle Plugin Reference Guide](https://docs.spring.io/spring-boot/4.0/gradle-plugin/index.html)
+* [Spring Web](https://docs.spring.io/spring-boot/4.0/reference/web/index.html)
+* [Groovy Documentation](https://docs.groovy-lang.org/docs/groovy-5.0.8/html/documentation/)
 * [Spock Reference Documentation](https://spockframework.org/spock/docs/2.4/index.html)
 * [The Book Of Geb](https://groovy.apache.org/geb/manual/current/)
 
