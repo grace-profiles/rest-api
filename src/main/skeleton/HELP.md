@@ -4,10 +4,10 @@
 
 For further reference, please consider the following sections:
 
-* [Official Gradle documentation](https://docs.gradle.org/8.14.5/userguide/userguide.html)
+* [Official Gradle documentation](https://docs.gradle.org/8.14.8/userguide/userguide.html)
 * [Spring Boot Gradle Plugin Reference Guide](https://docs.spring.io/spring-boot/3.5/gradle-plugin/index.html)
 * [Spring Web](https://docs.spring.io/spring-boot/3.5/reference/web/index.html)
-* [Groovy Documentation](https://docs.groovy-lang.org/docs/groovy-4.0.32/html/documentation/)
+* [Groovy Documentation](https://docs.groovy-lang.org/docs/groovy-4.0.33/html/documentation/)
 * [Spock Reference Documentation](https://spockframework.org/spock/docs/2.4/index.html)
 * [The Book Of Geb](https://groovy.apache.org/geb/manual/current/)
 
@@ -27,16 +27,12 @@ For further reference, please consider the following sections:
 [Grace Plugins](https://github.com/grace-plugins/) repository contains several plugins to develop applications more easier and productive.
 
 * [Grace Asset Pipeline Plugin](https://github.com/grace-plugins/grace-asset-pipeline) is a plugin used for managing and processing static assets in Grace applications.
-* [Grace Async and Events](https://github.com/graceframework/grace-async) provides asynchronous, parallel programming, Events APIs, which integrate Grace with various asynchronous libraries and frameworks such as GPars and RxJava.
-* [Grace Cache](https://github.com/graceframework/grace-cache) provides powerful and easy to use caching functionality to Grace applications and plugins.
+* [Grace Async](https://github.com/graceframework/grace-async) provides asynchronous, parallel programming, which integrate Grace with various asynchronous libraries and frameworks such as GPars and RxJava.
+* [Grace Data](https://github.com/graceframework/grace-data) formerly known as `GORM` is the data access toolkit to provides a rich set of APIs for accessing relational and non-relational data including implementations for Hibernate (SQL), MongoDB, etc.
 * [Grace Data Hibernate](https://github.com/graceframework/grace-data-hibernate) provides a GORM implementation for Hibernate ORM.
 * [Grace Data MongoDB](https://github.com/graceframework/grace-data-mongodb) provides a GORM implementation for the MongodB Document Database.
-* [Grace Database Migration](https://github.com/graceframework/grace-database-migration) helps you manage database changes uses the Liquibase library.
-* [Grace Scaffolding](https://github.com/graceframework/grace-scaffolding) is a plugin to generate scaffolded controllers and views for your Grace application.
-* [Grace Fields](https://github.com/graceframework/grace-fields) is a plugin allows you to customize the rendering of input fields for properties of domain objects, command beans and POGOs based on their type, name, etc.
-* [Grace Geb](https://github.com/graceframework/grace-geb) provides the Geb dependencies and a `create-functional-test` command for generating Geb tests.
-* [Grace Htmx](https://github.com/grace-plugins/grace-htmx) provides helpers to easy use [HTMX](https://htmx.org).
-* [Grace Views](https://github.com/graceframework/grace-views) provides implementation includes JSON views powered by Groovy's JsonBuilder, and other view types.
+* [Grace Events](https://github.com/graceframework/grace-events) provides Events APIs, which integrate Grace with various libraries such as GPars and RxJava.
+* [Grace Views](https://github.com/graceframework/grace-views) provides implementation includes JSON and Markup views powered by Groovy's JsonBuilder and MarkupTemplateEngine, also supports a variety of templating technologies, including Thymeleaf, FreeMarker, and Mustache.
 
 ### Profiles
 
@@ -46,6 +42,6 @@ Grace provides several profiles in the [Grace Profiles](https://github.com/grace
 * [plugin](https://github.com/grace-profiles/plugin) is a profie to create a plugin
 * [profile](https://github.com/grace-profiles/profile) is a profie to create a custom profile
 * [rest-api](https://github.com/grace-profiles/rest-api) is a profie for REST API applications
-* [starter](https://github.com/grace-profiles/starter) is a profile for getting start to create anything you like with application templates
-* [web-plugin](https://github.com/grace-profiles/web-plugin) is a profile for Web plugin that contains web resources `css` `js` `images`
+* [starter](https://github.com/grace-profiles/starter) is a profile to create a minimal application
 * [web](https://github.com/grace-profiles/web) is the default profile to creae a web app
+* [web-plugin](https://github.com/grace-profiles/web-plugin) is a profile for Web plugin that contains web resources `css` `js` `images`
